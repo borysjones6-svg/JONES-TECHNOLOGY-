@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#020712">
+<meta name="description" content="Jones Technology — Digital innovation from Africa for the world.">
+<title>Jones Technology | The Future</title>
+
+<style>
+/* =========================
+   JONES TECHNOLOGY CINEMATIC AD
+========================= */
+
+:root {
+    --cyan: #00e5ff;
+    --blue: #087cff;
+    --white: #f4fbff;
+    --muted: #a7bacd;
+    --background: #020712;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--background);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.advertisement {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 50% 45%,
+            #08294b 0%,
+            #041326 35%,
+            #020712 75%);
+}
+
+/* Cinematic light */
+
+.ambient-light {
+    position: absolute;
+    inset: -30%;
+    z-index: -2;
+    background:
+        radial-gradient(circle at 25% 35%,
+            rgba(0, 229, 255, .12), transparent 30%),
+        radial-gradient(circle at 75% 65%,
+            rgba(8, 124, 255, .15), transparent 35%);
+    animation: ambientMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes ambientMove {
+    from { transform: translate(-2%, 1%) scale(1); }
+    to   { transform: translate(2%, -1%) scale(1.12); }
+}
+
+/* Animated grid */
+
+.grid {
+    position: absolute;
+    inset: -100%;
+    z-index: -1;
+    opacity: .65;
+    background-image:
+        linear-gradient(rgba(0, 229, 255, .075) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, .075) 1px, transparent 1px);
+    background-size: 48px 48px;
+    transform: perspective(600px) rotateX(12deg);
+    animation: gridMove 18s linear infinite;
+    mask-image: linear-gradient(transparent, black 30%, black 75%, transparent);
+}
+
+@keyframes gridMove {
+    from { background-position: 0 0; }
+    to   { background-position: 48px 48px; }
+}
+
+/* Floating particles */
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 12px var(--cyan), 0 0 28px var(--blue);
+    animation: floatParticle 6s ease-in-out infinite alternate;
+}
+
+.p1 { top: 20%; left: 10%; }
+.p2 { top: 70%; left: 20%; animation-delay: -2s; }
+.p3 { top: 30%; right: 15%; animation-delay: -3s; }
+.p4 { bottom: 20%; right: 30%; animation-delay: -1s; }
+.p5 { top: 50%; left: 50%; animation-delay: -4s; }
+.p6 { top: 15%; right: 35%; animation-delay: -2.5s; }
+.p7 { bottom: 15%; left: 40%; animation-delay: -3.5s; }
+
+@keyframes floatParticle {
+    from { transform: translateY(0) scale(.7); opacity: .35; }
+    to   { transform: translateY(-70px) scale(1.7); opacity: 1; }
+}
+
+/* HUD details */
+
+.top-label {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    z-index: 5;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.top-label span {
+    color: var(--cyan);
+}
+
+.corner {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 5;
+    width: 28px;
+    height: 28px;
+    border-top: 1px solid var(--cyan);
+    border-right: 1px solid var(--cyan);
+    opacity: .7;
+}
+
+.bottom-label {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    text-align: center;
+    font-size: 9px;
+    color: #7794ad;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Scenes */
+
+.scene {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 65px 20px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.scene-content {
+    width: 100%;
+    max-width: 1050px;
+}
+
+.eyebrow {
+    margin-bottom: 22px;
+    color: var(--cyan);
+    font-size: clamp(10px, 1.5vw, 13px);
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.main-text {
+    font-size: clamp(34px, 7.4vw, 94px);
+    line-height: 1.08;
+    font-weight: 900;
+    letter-spacing: clamp(1px, .7vw, 7px);
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+    text-shadow:
+        0 0 12px rgba(0, 229, 255, .45),
+        0 0 36px rgba(0, 124, 255, .24);
+}
+
+.accent {
+    color: var(--cyan);
+    text-shadow: 0 0 25px rgba(0, 229, 255, .55);
+}
+
+.small-text {
+    max-width: 720px;
+    margin: 22px auto 0;
+    color: var(--muted);
+    font-size: clamp(12px, 2vw, 19px);
+    line-height: 1.8;
+    letter-spacing: clamp(1px, .4vw, 4px);
+    text-transform: uppercase;
+}
+
+/* Technology tags */
+
+.technology-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
+}
+
+.tech {
+    padding: 11px 15px;
+    border: 1px solid rgba(0, 229, 255, .45);
+    border-radius: 3px;
+    background: rgba(0, 229, 255, .055);
+    color: #dffaff;
+    font-size: clamp(9px, 1.6vw, 12px);
+    letter-spacing: 1.5px;
+    box-shadow: inset 0 0 16px rgba(0, 229, 255, .035);
+    animation: tagGlow 3s ease-in-out infinite alternate;
+}
+
+.tech:nth-child(even) {
+    animation-delay: -1.5s;
+}
+
+@keyframes tagGlow {
+    from { border-color: rgba(0, 229, 255, .25); }
+    to   { border-color: rgba(0, 229, 255, .8); }
+}
+
+/* Scene timeline: 60 seconds total */
+
+.scene1 { animation: scene1 60s linear infinite; }
+.scene2 { animation: scene2 60s linear infinite; }
+.scene3 { animation: scene3 60s linear infinite; }
+.scene4 { animation: scene4 60s linear infinite; }
+.scene5 { animation: scene5 60s linear infinite; }
+.scene6 { animation: scene6 60s linear infinite; }
+.scene7 { animation: scene7 60s linear infinite; }
+.scene8 { animation: scene8 60s linear infinite; }
+.scene9 { animation: scene9 60s linear infinite; }
+
+@keyframes scene1 {
+    0%   { opacity: 0; visibility: visible; transform: scale(1.12); }
+    2%   { opacity: 1; }
+    9%   { opacity: 1; transform: scale(1); }
+    12%  { opacity: 0; visibility: hidden; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes scene2 {
+    0%, 11% { opacity: 0; visibility: hidden; transform: translateY(30px); }
+    12% { visibility: visible; }
+    14% { opacity: 1; }
+    20% { opacity: 1; transform: translateY(0); }
+    22% { opacity: 0; visibility: hidden; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes scene3 {
+    0%, 21% { opacity: 0; visibility: hidden; transform: scale(.85); }
+    22% { visibility: visible; }
+    24% { opacity: 1; }
+    30% { opacity: 1; transform: scale(1); }
+    32% { opacity: 0; visibility: hidden; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes scene4 {
+    0%, 31% { opacity: 0; visibility: hidden; transform: translateY(25px); }
+    32% { visibility: visible; }
+    34% { opacity: 1; }
+    43% { opacity: 1; transform: translateY(0); }
+    45% { opacity: 0; visibility: hidden; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes scene5 {
+    0%, 44% { opacity: 0; visibility: hidden; transform: scale(.85); }
+    45% { visibility: visible; }
+    47% { opacity: 1; }
+    53% { opacity: 1; transform: scale(1); }
+    55% { opacity: 0; visibility: hidden; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes scene6 {
+    0%, 54% { opacity: 0; visibility: hidden; transform: translateX(25px); }
+    55% { visibility: visible; }
+    57% { opacity: 1; }
+    63% { opacity: 1; transform: translateX(0); }
+    65% { opacity: 0; visibility: hidden; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes scene7 {
+    0%, 64% { opacity: 0; visibility: hidden; transform: translateX(-25px); }
+    65% { visibility: visible; }
+    67% { opacity: 1; }
+    73% { opacity: 1; transform: translateX(0); }
+    75% { opacity: 0; visibility: hidden; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes scene8 {
+    0%, 74% { opacity: 0; visibility: hidden; transform: scale(.9); }
+    76% { visibility: visible; opacity: 1; }
+    86% { opacity: 1; transform: scale(1); }
+    88% { opacity: 0; visibility: hidden; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes scene9 {
+    0%, 87% { opacity: 0; visibility: hidden; transform: scale(.85); }
+    89% { visibility: visible; opacity: 1; }
+    94% { opacity: 1; transform: scale(1); }
+    100% { opacity: 1; visibility: visible; }
+}
+
+/* Final logo */
+
+.logo {
+    display: inline-block;
+    color: var(--cyan);
+    font-size: clamp(95px, 19vw, 190px);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -10px;
+    text-shadow:
+        0 0 20px var(--cyan),
+        0 0 55px var(--blue),
+        0 0 110px rgba(0, 229, 255, .55);
+    animation: logoPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes logoPulse {
+    from { transform: scale(1); filter: brightness(.85); }
+    to   { transform: scale(1.06); filter: brightness(1.3); }
+}
+
+.company-name {
+    margin-top: 22px;
+    font-size: clamp(22px, 5.3vw, 64px);
+    line-height: 1.2;
+    letter-spacing: clamp(2px, .8vw, 8px);
+    font-weight: 900;
+}
+
+.motto {
+    margin-top: 24px;
+    color: var(--cyan);
+    font-size: clamp(11px, 2vw, 20px);
+    letter-spacing: clamp(2px, .6vw, 6px);
+    line-height: 1.8;
+}
+
+/* Phone layout */
+
+@media (max-width: 480px) {
+    .scene { padding: 55px 17px; }
+
+    .main-text {
+        font-size: clamp(32px, 9vw, 46px);
+        letter-spacing: 1px;
+    }
+
+    .small-text {
+        margin-top: 17px;
+        letter-spacing: 2px;
+    }
+
+    .technology-list {
+        gap: 7px;
+        margin-top: 23px;
+    }
+
+    .tech { padding: 9px 10px; }
+
+    .top-label {
+        top: 16px;
+        left: 14px;
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .bottom-label {
+        bottom: 12px;
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .company-name { letter-spacing: 2px; }
+}
+
+/* Accessibility: reduce background motion if requested */
+
+@media (prefers-reduced-motion: reduce) {
+    .grid,
+    .ambient-light,
+    .particle,
+    .tech,
+    .logo {
+        animation-duration: 30s;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="advertisement">
+
+    <div class="ambient-light"></div>
+    <div class="grid"></div>
+
+    <div class="particle p1"></div>
+    <div class="particle p2"></div>
+    <div class="particle p3"></div>
+    <div class="particle p4"></div>
+    <div class="particle p5"></div>
+    <div class="particle p6"></div>
+    <div class="particle p7"></div>
+
+    <div class="top-label">
+        <span>JT</span> SYSTEMS // DIGITAL FUTURE
+    </div>
+
+    <div class="corner"></div>
+
+    <!-- SCENE 1 -->
+    <section class="scene scene1">
+        <div class="scene-content">
+            <p class="eyebrow">A new era begins</p>
+            <h1 class="main-text">
+                THE FUTURE IS<br>
+                <span class="accent">BEING BUILT.</span>
+            </h1>
+            <p class="small-text">
+                A new era of technology
+            </p>
+        </div>
+    </section>
+
+    <!-- SCENE 2 -->
+    <section class="scene scene2">
+        <div class="scene-content">
+            <p class="eyebrow">Our origin. Our ambition.</p>
+            <h2 class="main-text">
+                FROM <span class="accent">AFRICA.</span>
+            </h2>
+            <p class="small-text">
+                Where great ideas begin
+            </p>
+        </div>
+    </section>
+
+    <!-- SCENE 3 -->
+    <section class="scene scene3">
+        <div class="scene-content">
+            <p class="eyebrow">Built without borders</p>
+            <h2 class="main-text">
+                FOR THE<br>
+                <span class="accent">WORLD.</span>
+            </h2>
+            <p class="small-text">
+                Technology without borders
+            </p>
+        </div>
+    </section>
+
+    <!-- SCENE 4 -->
+    <section class="scene scene4">
+        <div class="scene-content">
+            <p class="eyebrow">Digital experiences</p>
+            <h2 class="main-text">
+                WE MAKE<br>
+                <span class="accent">WEBSITES.</span>
+            </h2>
+            <p class="small-text">
+                Websites designed to make your ideas stand out
+            </p>
+            <div class="technology-list">
+                <div class="tech">WEB DESIGN</div>
+                <div class="tech">WEB DEVELOPMENT</div>
+                <div class="tech">RESPONSIVE DESIGN</div>
+                <div class="tech">DIGITAL SOLUTIONS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 5 -->
+    <section class="scene scene5">
+        <div class="scene-content">
+            <p class="eyebrow">Beyond ordinary thinking</p>
+            <h2 class="main-text">
+                ARTIFICIAL<br>
+                <span class="accent">INTELLIGENCE.</span>
+            </h2>
+            <p class="small-text">
+                Exploring intelligent digital solutions
+            </p>
+        </div>
+    </section>
+
+    <!-- SCENE 6 -->
+    <section class="scene scene6">
+        <div class="scene-content">
+            <p class="eyebrow">Connected innovation</p>
+            <h2 class="main-text">
+                ROBOTICS<br>
+                <span class="accent">&amp; CLOUD.</span>
+            </h2>
+            <p class="small-text">
+                Connected. Automated. Intelligent.
+            </p>
+        </div>
+    </section>
+
+    <!-- SCENE 7 -->
+    <section class="scene scene7">
+        <div class="scene-content">
+            <p class="eyebrow">Trust is essential</p>
+            <h2 class="main-text">
+                <span class="accent">CYBER</span><br>
+                SECURITY.
+            </h2>
+            <p class="small-text">
+                Building a safer digital future
+            </p>
+            <div class="technology-list">
+                <div class="tech">SECURITY</div>
+                <div class="tech">NETWORKS</div>
+                <div class="tech">DATA PROTECTION</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 8 -->
+    <section class="scene scene8">
+        <div class="scene-content">
+            <p class="eyebrow">Ideas into impact</p>
+            <h2 class="main-text">
+                JONES<br>
+                <span class="accent">TECHNOLOGY.</span>
+            </h2>
+            <p class="small-text">
+                From Africa. For the world.
+            </p>
+        </div>
+    </section>
+
+    <!-- SCENE 9 -->
+    <section class="scene scene9">
+        <div class="scene-content">
+            <div class="logo">JT</div>
+            <h2 class="company-name">
+                JONES TECHNOLOGY
+            </h2>
+            <p class="motto">
+                INNOVATE. BUILD. ADVANCE.
+            </p>
+        </div>
+    </section>
+
+    <div class="bottom-label">
+        THINK BIGGER // BUILD THE FUTURE
+    </div>
+
+</div>
+</body>
+</html>
