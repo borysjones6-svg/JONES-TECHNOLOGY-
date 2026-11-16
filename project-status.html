@@ -1,0 +1,839 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Securely track your website development project, progress, payments and updates with Jones Technology.">
+
+    <meta name="theme-color" content="#080808">
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Client Project Portal | Jones Technology</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="project-status.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="project-portal-page">
+
+    <!-- =====================================
+         HEADER / NAVIGATION
+    ====================================== -->
+
+    <header class="portal-header">
+
+        <a href="index.html"
+           class="portal-logo"
+           aria-label="Jones Technology home">
+
+            <span class="logo-mark">J</span>
+
+            <span>
+                JONES
+                <small>TECHNOLOGY</small>
+            </span>
+
+        </a>
+
+        <nav class="portal-navigation"
+             aria-label="Portal navigation">
+
+            <a href="index.html" class="back-home">
+                Back to Website
+            </a>
+
+            <a href="#portal-support" class="portal-nav-support">
+                Support
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main class="portal-main">
+
+        <!-- =================================
+             HERO INTRODUCTION
+        ================================== -->
+
+        <section class="portal-intro">
+
+            <span class="eyebrow">
+                JONES TECHNOLOGY / CLIENT PORTAL
+            </span>
+
+            <h1>
+                Your Project.
+                <span>Your Progress.</span>
+            </h1>
+
+            <p>
+                Welcome to your project dashboard.
+
+                Follow your website development journey,
+                review project updates, monitor payment
+                records and stay informed about your launch.
+            </p>
+
+            <div class="portal-trust-indicators">
+
+                <span>
+                    <span class="status-dot"></span>
+                    Client Portal
+                </span>
+
+                <span>
+                    Private Project Access
+                </span>
+
+                <span>
+                    Jones Technology
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             PROJECT LOOKUP
+        ================================== -->
+
+        <section class="lookup-section"
+                 id="project-lookup">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    CLIENT ACCESS
+                </span>
+
+                <h2>
+                    Find Your <span>Project.</span>
+                </h2>
+
+                <p>
+                    Enter your project reference number
+                    and registered email address to
+                    retrieve your project information.
+                </p>
+
+            </div>
+
+
+            <form id="projectLookupForm"
+                  class="project-lookup-form"
+                  autocomplete="on">
+
+                <div class="form-group">
+
+                    <label for="projectReference">
+                        Project Reference Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="projectReference"
+                        name="projectReference"
+                        placeholder="Example: JT-2026-0001"
+                        autocomplete="off"
+                        maxlength="50"
+                        required
+                    >
+
+                    <small>
+                        Use the reference provided by
+                        Jones Technology.
+                    </small>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="clientEmail">
+                        Registered Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="clientEmail"
+                        name="clientEmail"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        maxlength="254"
+                        required
+                    >
+
+                    <small>
+                        Enter the email address associated
+                        with your project.
+                    </small>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    id="lookupButton"
+                    class="lookup-button"
+                >
+                    <span>Check Project Status</span>
+                    <span aria-hidden="true">→</span>
+                </button>
+
+
+                <p class="form-notice"
+                   id="lookupMessage"
+                   aria-live="polite"
+                   role="status">
+
+                    Your project information is private.
+                    Access is subject to verification.
+
+                </p>
+
+            </form>
+
+        </section>
+
+
+        
+        <!-- =================================
+             PROJECT DASHBOARD
+        ================================== -->
+
+        <section
+            class="project-result"
+            id="projectResult"
+            hidden
+            aria-live="polite"
+        >
+
+            <!-- PROJECT HEADER -->
+
+            <div class="result-heading">
+
+                <span class="eyebrow">
+                    YOUR PROJECT DASHBOARD
+                </span>
+
+                <h2 id="resultProjectName">
+                    Project Details
+                </h2>
+
+                <p id="resultProjectReference"></p>
+
+                <div class="project-status-label"
+                     id="resultStatusBadge">
+                    Awaiting project information
+                </div>
+
+            </div>
+
+
+            <!-- QUICK OVERVIEW -->
+
+            <div class="dashboard-overview">
+
+                <article class="overview-card">
+
+                    <span>Project Progress</span>
+
+                    <strong id="overviewProgress">—</strong>
+
+                    <small>Development completion</small>
+
+                </article>
+
+
+                <article class="overview-card">
+
+                    <span>Project Status</span>
+
+                    <strong id="overviewStatus">—</strong>
+
+                    <small>Current development stage</small>
+
+                </article>
+
+
+                <article class="overview-card">
+
+                    <span>Payment Status</span>
+
+                    <strong id="overviewPayment">—</strong>
+
+                    <small>Verified payment records</small>
+
+                </article>
+
+            </div>
+
+
+            <!-- =================================
+                 DEVELOPMENT PROGRESS
+            ================================== -->
+
+            <div class="result-card progress-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <span class="eyebrow">
+                            DEVELOPMENT TRACKER
+                        </span>
+
+                        <h3>Project Progress</h3>
+                    </div>
+
+                    <span class="progress-percentage"
+                          id="progressPercentage">
+                        —
+                    </span>
+
+                </div>
+
+
+                <div class="progress-track"
+                     role="progressbar"
+                     id="projectProgressBar"
+                     aria-label="Project development progress"
+                     aria-valuemin="0"
+                     aria-valuemax="100"
+                     aria-valuenow="0">
+
+                    <div
+                        class="progress-fill"
+                        id="progressFill"
+                    ></div>
+
+                </div>
+
+
+                <p id="progressText">
+                    Awaiting verified project information.
+                </p>
+
+
+                <div class="project-timeline">
+
+                    <div class="timeline-step"
+                         id="stepPending">
+
+                        <span>01</span>
+                        <p>Pending</p>
+
+                    </div>
+
+
+                    <div class="timeline-step"
+                         id="stepProgress">
+
+                        <span>02</span>
+                        <p>In Progress</p>
+
+                    </div>
+
+
+                    <div class="timeline-step"
+                         id="stepCompleted">
+
+                        <span>03</span>
+                        <p>Completed</p>
+
+                    </div>
+
+
+                    <div class="timeline-step"
+                         id="stepLaunched">
+
+                        <span>04</span>
+                        <p>Launched</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 PROJECT INFORMATION
+            ================================== -->
+
+            <div class="result-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <span class="eyebrow">
+                            PROJECT DETAILS
+                        </span>
+
+                        <h3>Project Information</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="info-row">
+                    <span>Project Type</span>
+                    <strong id="resultProjectType">—</strong>
+                </div>
+
+
+                <div class="info-row">
+                    <span>Project Status</span>
+                    <strong id="resultProjectStatus">—</strong>
+                </div>
+
+
+                <div class="info-row">
+                    <span>Last Updated</span>
+                    <strong id="resultUpdated">—</strong>
+                </div>
+
+
+                <div class="info-row">
+                    <span>Project Start Date</span>
+                    <strong id="resultStartDate">—</strong>
+                </div>
+
+
+                <div class="info-row">
+                    <span>Expected Completion</span>
+                    <strong id="resultExpectedDate">—</strong>
+                </div>
+
+
+                <div class="info-row">
+                    <span>Assigned Project Manager</span>
+                    <strong id="resultProjectManager">—</strong>
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 RECENT PROJECT UPDATES
+            ================================== -->
+
+            <div class="result-card updates-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <span class="eyebrow">
+                            DEVELOPMENT ACTIVITY
+                        </span>
+
+                        <h3>Recent Updates</h3>
+                    </div>
+
+                </div>
+
+
+                <div id="projectUpdates"
+                     class="project-updates">
+
+                    <p class="empty-state">
+                        No project updates are available yet.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 PAYMENT OVERVIEW
+            ================================== -->
+
+            <div class="result-card payment-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <span class="eyebrow">
+                            FINANCIAL OVERVIEW
+                        </span>
+
+                        <h3>Payment Summary</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="info-row">
+                    <span>Agreed Project Price</span>
+                    <strong id="resultTotal">KSh —</strong>
+                </div>
+
+
+                <div class="info-row">
+                    <span>Amount Paid</span>
+                    <strong id="resultPaid">KSh —</strong>
+                </div>
+
+
+                <div class="info-row balance-row">
+                    <span>Outstanding Balance</span>
+                    <strong id="resultBalance">KSh —</strong>
+                </div>
+
+
+                <div class="info-row">
+                    <span>Payment Status</span>
+                    <strong id="resultPaymentStatus">—</strong>
+                </div>
+
+
+                <p class="payment-notice">
+                    Payment information is displayed only
+                    after verification by authorised
+                    Jones Technology personnel.
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 PAYMENT HISTORY
+            ================================== -->
+
+            <div class="result-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <span class="eyebrow">
+                            TRANSACTION RECORDS
+                        </span>
+
+                        <h3>Payment History</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="payment-history"
+                     id="paymentHistory">
+
+                    <p class="empty-state">
+                        No verified payment transactions
+                        are available yet.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 RECEIPTS
+            ================================== -->
+
+            <div class="result-card receipt-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <span class="eyebrow">
+                            PAYMENT DOCUMENTATION
+                        </span>
+
+                        <h3>Payment Receipts</h3>
+                    </div>
+
+                </div>
+
+
+                <p id="receiptMessage">
+                    No verified receipt is available yet.
+                </p>
+
+
+                <p id="receiptNumber"></p>
+
+
+                <div id="receiptList"
+                     class="receipt-list">
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 PROJECT HANDOVER
+            ================================== -->
+
+            <div class="result-card handover-card">
+
+                <div class="card-heading">
+
+                    <div>
+                        <span class="eyebrow">
+                            PROJECT DELIVERY
+                        </span>
+
+                        <h3>Launch & Handover</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="info-row">
+                    <span>Launch Status</span>
+                    <strong id="resultLaunchStatus">—</strong>
+                </div>
+
+
+                <div class="info-row">
+                    <span>Website Address</span>
+                    <strong id="resultWebsiteAddress">—</strong>
+                </div>
+
+
+                <p class="payment-notice">
+                    Website links and handover information
+                    will appear here when confirmed by
+                    Jones Technology.
+                </p>
+
+            </div>
+
+        </section>
+
+
+      
+        <!-- =================================
+             CLIENT SUPPORT
+        ================================== -->
+
+        <section class="portal-support"
+                 id="portal-support">
+
+            <span class="eyebrow">
+                WE ARE HERE TO HELP
+            </span>
+
+            <h2>
+                Need <span>Assistance?</span>
+            </h2>
+
+            <p>
+                Have a question about your project,
+                development progress or payment?
+                Our team is available to assist.
+            </p>
+
+
+            <div class="support-actions">
+
+                <a
+                    href="https://wa.me/254771776861?text=Hello%20Jones%20Technology.%20I%20need%20assistance%20with%20my%20project."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="support-button"
+                >
+                    Contact Jones Technology
+                </a>
+
+
+                <button
+                    type="button"
+                    class="support-chat-button"
+                    onclick="window.JARVIS && window.JARVIS.open()"
+                >
+                    Ask JARVIS
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="portal-footer">
+
+        <a href="index.html" class="portal-footer-logo">
+            JONES TECHNOLOGY
+        </a>
+
+        <p>
+            &copy; <span id="currentYear"></span>
+            Jones Technology. All rights reserved.
+        </p>
+
+        <p>
+            A venture under Jones Group Holdings.
+        </p>
+
+        <p class="footer-motto">
+            INNOVATE. INVEST. IMPACT. INSPIRE.
+        </p>
+
+        <a href="index.html">
+            Return to Main Website
+        </a>
+
+    </footer>
+
+
+    <!-- =====================================
+         J.A.R.V.I.S. SHARED CHATBOT
+    ====================================== -->
+
+    <button
+        id="jtechChatToggle"
+        class="jtech-chat-toggle"
+        type="button"
+        aria-label="Open JARVIS assistant"
+        aria-controls="jtechChatWindow"
+        aria-expanded="false"
+    >
+        <span class="chat-icon">✦</span>
+        <span>JARVIS</span>
+    </button>
+
+
+    <div
+        id="jtechChatWindow"
+        class="jtech-chat-window"
+        aria-hidden="true"
+    >
+
+        <div class="jtech-chat-header">
+
+            <div class="jtech-chat-brand">
+
+                <div class="jtech-chat-avatar">
+                    J
+                </div>
+
+                <div>
+                    <strong>J.A.R.V.I.S.</strong>
+                    <small>Jones Technology Assistant</small>
+                </div>
+
+            </div>
+
+
+            <div class="jtech-chat-controls">
+
+                <button
+                    id="jtechChatMinimize"
+                    type="button"
+                    aria-label="Minimize chatbot"
+                >−</button>
+
+
+                <button
+                    id="jtechChatClose"
+                    type="button"
+                    aria-label="Close chatbot"
+                >×</button>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="jtechChatMessages"
+            class="jtech-chat-messages"
+            aria-live="polite"
+        ></div>
+
+
+        <div class="jtech-chat-quick-replies">
+
+            <button
+                type="button"
+                data-jtech-question="What services do you offer?"
+            >
+                Services
+            </button>
+
+
+            <button
+                type="button"
+                data-jtech-question="How much do your websites cost?"
+            >
+                Pricing
+            </button>
+
+
+            <button
+                type="button"
+                data-jtech-question="How can I track my project?"
+            >
+                My Project
+            </button>
+
+
+            <button
+                type="button"
+                data-jtech-question="How can I contact you?"
+            >
+                Contact
+            </button>
+
+        </div>
+
+
+        <form
+            id="jtechChatForm"
+            class="jtech-chat-form"
+        >
+
+            <input
+                type="text"
+                id="jtechChatInput"
+                placeholder="Ask JARVIS anything..."
+                autocomplete="off"
+                aria-label="Message JARVIS"
+                maxlength="1000"
+                required
+            >
+
+            <button
+                type="submit"
+                aria-label="Send message"
+            >
+                ➤
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- =====================================
+         JAVASCRIPT FILES
+         Load each file ONCE
+    ====================================== -->
+
+    <script src="project-status.js" defer></script>
+    <script src="jarvis.js" defer></script>
+
+</body>
+</html>
+
