@@ -1,0 +1,3576 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Explore professional website development packages by Jones Technology. Affordable digital solutions for businesses, entrepreneurs and organisations in Kenya and worldwide.">
+
+    <meta name="theme-color" content="#080808">
+
+    <title>Website Pricing | Jones Technology</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+        /* =========================================
+           JONES TECHNOLOGY
+           WEBSITE PRICING — MODERN EDITION
+           A venture under Jones Group Holdings
+        ========================================= */
+
+        :root {
+            --black: #080808;
+            --black-soft: #101010;
+            --black-card: #141414;
+            --black-light: #1b1b1b;
+
+            --gold: #d6ad55;
+            --gold-light: #f3d58b;
+            --gold-dark: #a77b2e;
+
+            --white: #ffffff;
+            --text: #eeeeee;
+            --muted: #a6a6a6;
+
+            --border: rgba(214, 173, 85, 0.19);
+            --gold-glow: rgba(214, 173, 85, 0.12);
+
+            --radius-small: 10px;
+            --radius-medium: 16px;
+            --radius-large: 24px;
+
+            --shadow:
+                0 15px 45px rgba(0, 0, 0, 0.35);
+
+            --transition:
+                0.3s ease;
+        }
+
+        /* RESET */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--black);
+            color: var(--text);
+
+            font-family: "DM Sans", sans-serif;
+
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: "DM Sans", sans-serif;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font-size: inherit;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        /* GENERAL LAYOUT */
+
+        .container {
+            width: min(1160px, 92%);
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 85px 0;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin: 0 auto 42px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            color: var(--gold);
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+        }
+
+        .eyebrow::before,
+        .eyebrow::after {
+            content: "";
+            width: 22px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .section-heading h2 {
+            color: var(--white);
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(2rem, 5vw, 3.1rem);
+            line-height: 1.2;
+
+            margin-bottom: 15px;
+        }
+
+        .section-heading h2 span {
+            color: var(--gold);
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
+
+        /* BUTTON SYSTEM */
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            min-height: 48px;
+            padding: 12px 22px;
+
+            border: 1px solid transparent;
+            border-radius: 8px;
+
+            font-weight: 800;
+            font-size: 0.9rem;
+
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(
+                135deg,
+                var(--gold-light),
+                var(--gold)
+            );
+
+            color: #111;
+            box-shadow: 0 7px 22px var(--gold-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(214, 173, 85, 0.25);
+        }
+
+        .btn-outline {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: #111;
+            transform: translateY(-2px);
+        }
+
+        /* ACCESSIBILITY */
+
+        :focus-visible {
+            outline: 3px solid var(--gold-light);
+            outline-offset: 4px;
+        }
+
+        ::selection {
+            background: var(--gold);
+            color: #111;
+        }
+
+        /* SUBTLE BACKGROUND EFFECT */
+
+        .gold-glow {
+            position: fixed;
+            width: 320px;
+            height: 320px;
+
+            border-radius: 50%;
+            background: var(--gold);
+
+            filter: blur(150px);
+            opacity: 0.045;
+
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .glow-one {
+            top: 10%;
+            left: -180px;
+        }
+
+        .glow-two {
+            bottom: 5%;
+            right: -180px;
+        }
+
+        /* HEADER */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(8, 8, 8, 0.94);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            min-height: 76px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.15;
+        }
+
+        .brand-name {
+            color: var(--white);
+            font-size: 1.05rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .brand-name span {
+            color: var(--gold);
+        }
+
+        .brand-caption {
+            color: var(--muted);
+            font-size: 0.63rem;
+            letter-spacing: 1.5px;
+            margin-top: 5px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .back-home {
+            color: var(--muted);
+            font-size: 0.86rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .back-home:hover {
+            color: var(--gold);
+        }
+
+        /* RESPONSIVE FOUNDATION */
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 90%;
+            }
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .header-inner {
+                min-height: 68px;
+            }
+
+            .brand-name {
+                font-size: 0.91rem;
+            }
+
+            .brand-caption {
+                font-size: 0.55rem;
+            }
+
+            .header-actions {
+                gap: 10px;
+            }
+
+            .back-home {
+                font-size: 0.76rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="gold-glow glow-one"></div>
+    <div class="gold-glow glow-two"></div>
+
+    
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="index.html" class="brand" aria-label="Jones Technology home">
+                <span class="brand-name">JONES <span>TECHNOLOGY</span></span>
+                <span class="brand-caption">A VENTURE UNDER JONES GROUP HOLDINGS</span>
+            </a>
+
+            <div class="header-actions">
+                <a href="index.html#services" class="back-home">
+                    ← Back to Website
+                </a>
+
+                <a href="#packages" class="btn btn-primary">
+                    Explore Packages
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="pricing-hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
+                    DIGITAL SOLUTIONS • KENYA & WORLDWIDE
+                </div>
+
+                <p class="hero-kicker">
+                    BUILD YOUR DIGITAL FUTURE
+                </p>
+
+                <h1>
+                    Your Business.<br>
+                    Your Website.<br>
+                    <span>Your Growth.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Your business deserves more than just an online presence.
+                    Get a professional digital platform designed to showcase
+                    your brand, attract customers and create new opportunities.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="#packages" class="btn btn-primary">
+                        Explore Pricing <span>→</span>
+                    </a>
+
+                    <a href="#custom-project" class="btn btn-outline">
+                        Request Custom Quote
+                    </a>
+
+                </div>
+
+                <div class="hero-trust">
+
+                    <div>
+                        <strong>09</strong>
+                        <span>Business Categories</span>
+                    </div>
+
+                    <div>
+                        <strong>100%</strong>
+                        <span>Customisable Solutions</span>
+                    </div>
+
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Online Presence</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-bottom-line"></div>
+
+        </section>
+
+
+        <!-- HERO STYLES -->
+        <style>
+
+            .pricing-hero {
+                position: relative;
+                min-height: 650px;
+
+                display: flex;
+                align-items: center;
+
+                overflow: hidden;
+
+                background:
+                    radial-gradient(
+                        circle at 80% 30%,
+                        rgba(214, 173, 85, 0.13),
+                        transparent 35%
+                    ),
+                    linear-gradient(
+                        120deg,
+                        #080808 10%,
+                        #15120b 100%
+                    );
+
+                border-bottom: 1px solid var(--border);
+            }
+
+            .hero-overlay {
+                position: absolute;
+                inset: 0;
+
+                background-image:
+                    linear-gradient(
+                        rgba(255,255,255,0.018) 1px,
+                        transparent 1px
+                    ),
+                    linear-gradient(
+                        90deg,
+                        rgba(255,255,255,0.018) 1px,
+                        transparent 1px
+                    );
+
+                background-size: 45px 45px;
+                pointer-events: none;
+            }
+
+            .hero-content {
+                position: relative;
+                z-index: 2;
+                padding-top: 80px;
+                padding-bottom: 75px;
+            }
+
+            .hero-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 9px;
+
+                padding: 9px 15px;
+
+                border: 1px solid var(--border);
+                border-radius: 50px;
+
+                color: var(--gold-light);
+                background: rgba(214, 173, 85, 0.06);
+
+                font-size: 0.7rem;
+                font-weight: 800;
+                letter-spacing: 1.3px;
+
+                margin-bottom: 28px;
+            }
+
+            .status-dot {
+                width: 8px;
+                height: 8px;
+
+                border-radius: 50%;
+                background: #54c98a;
+
+                box-shadow: 0 0 12px rgba(84, 201, 138, 0.7);
+            }
+
+            .hero-kicker {
+                color: var(--gold);
+                font-size: 0.85rem;
+                font-weight: 800;
+                letter-spacing: 4px;
+                margin-bottom: 15px;
+            }
+
+            .hero-content h1 {
+                color: var(--white);
+
+                font-family: "Playfair Display", serif;
+                font-size: clamp(3rem, 8vw, 6rem);
+
+                line-height: 1.05;
+                letter-spacing: -2px;
+
+                margin-bottom: 25px;
+            }
+
+            .hero-content h1 span {
+                color: var(--gold);
+            }
+
+            .hero-description {
+                max-width: 620px;
+
+                color: #b9b9b9;
+                font-size: 1.04rem;
+                line-height: 1.9;
+
+                margin-bottom: 32px;
+            }
+
+            .hero-actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 14px;
+                margin-bottom: 65px;
+            }
+
+            .hero-trust {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 55px;
+            }
+
+            .hero-trust div {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .hero-trust strong {
+                color: var(--gold);
+                font-size: 1.6rem;
+                font-weight: 800;
+            }
+
+            .hero-trust span {
+                color: var(--muted);
+                font-size: 0.78rem;
+            }
+
+            .hero-bottom-line {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+
+                width: 100%;
+                height: 2px;
+
+                background: linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--gold),
+                    transparent
+                );
+            }
+
+            @media (max-width: 600px) {
+
+                .pricing-hero {
+                    min-height: auto;
+                }
+
+                .hero-content {
+                    padding-top: 75px;
+                    padding-bottom: 65px;
+                }
+
+                .hero-content h1 {
+                    font-size: clamp(2.7rem, 13vw, 4.3rem);
+                    letter-spacing: -1px;
+                }
+
+                .hero-kicker {
+                    font-size: 0.72rem;
+                    letter-spacing: 2.5px;
+                }
+
+                .hero-description {
+                    font-size: 0.93rem;
+                }
+
+                .hero-actions {
+                    flex-direction: column;
+                    margin-bottom: 45px;
+                }
+
+                .hero-actions .btn {
+                    width: 100%;
+                }
+
+                .hero-trust {
+                    gap: 25px;
+                    justify-content: space-between;
+                }
+
+                .hero-trust strong {
+                    font-size: 1.3rem;
+                }
+
+                .hero-trust span {
+                    font-size: 0.68rem;
+                }
+            }
+
+        </style>
+
+
+        <!-- PRICING INTRODUCTION -->
+        <section class="section pricing-intro" id="pricing-intro">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">INVEST IN YOUR FUTURE</span>
+
+                    <h2>
+                        Professional Websites.<br>
+                        <span>Transparent Pricing.</span>
+                    </h2>
+
+                    <p>
+                        Choose a solution that matches your business.
+                        Every project is planned around your goals,
+                        audience and required features.
+                    </p>
+
+                </div>
+
+
+                <!-- PRICING TRANSPARENCY NOTICE -->
+                <div class="pricing-notice">
+
+                    <div class="notice-icon">✦</div>
+
+                    <div class="notice-content">
+
+                        <strong>Know what you're investing in</strong>
+
+                        <p>
+                            The prices displayed are indicative development
+                            estimates, not automatic final quotations.
+                            Your confirmed price will depend on the project
+                            scope, functionality and agreed deliverables.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <style>
+
+            .pricing-notice {
+                display: flex;
+                align-items: flex-start;
+                gap: 18px;
+
+                padding: 25px;
+
+                background: linear-gradient(
+                    120deg,
+                    rgba(214, 173, 85, 0.10),
+                    rgba(214, 173, 85, 0.025)
+                );
+
+                border: 1px solid var(--border);
+                border-radius: var(--radius-medium);
+            }
+
+            .notice-icon {
+                flex-shrink: 0;
+
+                width: 43px;
+                height: 43px;
+
+                display: grid;
+                place-items: center;
+
+                color: #111;
+                background: var(--gold);
+
+                border-radius: 12px;
+                font-size: 1.4rem;
+            }
+
+            .notice-content strong {
+                display: block;
+                color: var(--gold-light);
+                font-size: 1rem;
+                margin-bottom: 5px;
+            }
+
+            .notice-content p {
+                color: var(--muted);
+                font-size: 0.87rem;
+                line-height: 1.8;
+            }
+
+            @media (max-width: 500px) {
+
+                .pricing-notice {
+                    padding: 18px;
+                    gap: 12px;
+                }
+
+                .notice-icon {
+                    width: 35px;
+                    height: 35px;
+                }
+
+            }
+
+        </style>
+
+
+        <!-- PACKAGE DISCOVERY -->
+        <section class="section package-discovery" id="packages">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">FIND YOUR SOLUTION</span>
+
+                    <h2>
+                        Explore Our <span>Website Packages</span>
+                    </h2>
+
+                    <p>
+                        From small businesses to established organisations,
+                        find a digital solution that fits your needs.
+                    </p>
+
+                </div>
+
+
+                <!-- SEARCH -->
+                <div class="package-search">
+
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        type="search"
+                        id="packageSearch"
+                        placeholder="Search packages... e.g. restaurant, salon, school"
+                        aria-label="Search website packages"
+                    >
+
+                    <button
+                        type="button"
+                        id="clearSearch"
+                        aria-label="Clear search"
+                    >
+                        ✕
+                    </button>
+
+                </div>
+
+
+                <!-- CATEGORY FILTERS -->
+                <div class="category-filters" id="categoryFilters">
+
+                    <button
+                        type="button"
+                        class="filter-btn active"
+                        data-filter="all"
+                        aria-pressed="true"
+                    >
+                        All Packages
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        data-filter="business"
+                        aria-pressed="false"
+                    >
+                        Businesses
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        data-filter="personal"
+                        aria-pressed="false"
+                    >
+                        Personal
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter-btn"
+                        data-filter="organisation"
+                        aria-pressed="false"
+                    >
+                        Organisations
+                    </button>
+
+                </div>
+
+
+                <div class="package-results">
+
+                    <p>
+                        <strong id="resultCount">9</strong>
+                        website packages available
+                    </p>
+
+                    <span>Choose a package to explore its details.</span>
+
+                </div>
+
+
+                <!-- PART 3 WILL INSERT THE NINE PACKAGE CARDS HERE -->
+
+            </div>
+
+        </section>
+
+
+        <!-- PACKAGE SEARCH STYLES -->
+        <style>
+
+            .package-search {
+                max-width: 720px;
+                height: 60px;
+
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                margin: 0 auto 22px;
+                padding: 0 18px;
+
+                background: var(--black-card);
+
+                border: 1px solid var(--border);
+                border-radius: 12px;
+
+                transition: var(--transition);
+            }
+
+            .package-search:focus-within {
+                border-color: var(--gold);
+                box-shadow: 0 0 0 3px var(--gold-glow);
+            }
+
+            .search-icon {
+                color: var(--gold);
+                font-size: 1.7rem;
+            }
+
+            .package-search input {
+                flex: 1;
+                width: 100%;
+
+                background: transparent;
+                border: none;
+                outline: none;
+
+                color: var(--white);
+                font-size: 0.91rem;
+            }
+
+            .package-search input::placeholder {
+                color: #777;
+            }
+
+            #clearSearch {
+                display: none;
+
+                color: var(--muted);
+                background: transparent;
+                border: none;
+
+                padding: 8px;
+            }
+
+            #clearSearch.visible {
+                display: block;
+            }
+
+            .category-filters {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                margin-bottom: 28px;
+            }
+
+            .filter-btn {
+                padding: 10px 18px;
+
+                color: var(--muted);
+                background: var(--black-card);
+
+                border: 1px solid #292929;
+                border-radius: 50px;
+
+                font-size: 0.8rem;
+                font-weight: 700;
+
+                transition: var(--transition);
+            }
+
+            .filter-btn:hover,
+            .filter-btn.active {
+                color: #111;
+                background: var(--gold);
+                border-color: var(--gold);
+            }
+
+            .package-results {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 12px;
+
+                padding: 17px 0;
+                border-bottom: 1px solid #252525;
+
+                margin-bottom: 30px;
+            }
+
+            .package-results p {
+                color: var(--white);
+                font-size: 0.87rem;
+            }
+
+            .package-results strong {
+                color: var(--gold);
+            }
+
+            .package-results span {
+                color: var(--muted);
+                font-size: 0.78rem;
+            }
+
+            @media (max-width: 600px) {
+
+                .package-search {
+                    height: 55px;
+                    padding: 0 13px;
+                }
+
+                .package-search input {
+                    font-size: 0.78rem;
+                }
+
+                .category-filters {
+                    justify-content: flex-start;
+                    overflow-x: auto;
+                    flex-wrap: nowrap;
+
+                    padding-bottom: 8px;
+                }
+
+                .filter-btn {
+                    flex-shrink: 0;
+                }
+
+                .package-results {
+                    align-items: flex-start;
+                    flex-direction: column;
+                    gap: 4px;
+                }
+
+            }
+
+        </style>
+
+      
+                <!-- =====================================
+                     WEBSITE PACKAGE COLLECTION
+                ====================================== -->
+
+                <div class="pricing-grid" id="pricingGrid">
+
+                    <!-- 01 RESTAURANTS -->
+                    <article class="pricing-card"
+                             data-category="business"
+                             data-search="restaurant cafe food hotel menu takeaway dining">
+
+                        <div class="card-top">
+                            <span class="package-number">01 / 09</span>
+                            <span class="package-type">FOOD & HOSPITALITY</span>
+                        </div>
+
+                        <div class="package-icon">🍽️</div>
+
+                        <h3>Restaurants & Cafés</h3>
+
+                        <p class="package-description">
+                            Give customers a taste of your business
+                            before they even walk through your doors.
+                        </p>
+
+                        <div class="package-price">
+                            <span>Development estimate</span>
+                            <strong>KSh 4,000 <small>–</small> 8,000</strong>
+                        </div>
+
+                        <div class="card-divider"></div>
+
+                        <h4>What's included</h4>
+
+                        <ul class="feature-list">
+                            <li>Digital food and drinks menu</li>
+                            <li>Food and restaurant gallery</li>
+                            <li>Business hours and location</li>
+                            <li>WhatsApp enquiry integration</li>
+                            <li>Mobile-friendly design</li>
+                        </ul>
+
+                        <button class="quote-button"
+                                type="button"
+                                data-category="Restaurants & Cafés"
+                                data-price="KSh 4,000 – 8,000">
+                            Request This Package →
+                        </button>
+
+                    </article>
+
+
+                    <!-- 02 BARBERSHOPS -->
+                    <article class="pricing-card"
+                             data-category="business"
+                             data-search="barber barbershop salon beauty spa hair">
+
+                        <div class="card-top">
+                            <span class="package-number">02 / 09</span>
+                            <span class="package-type">BEAUTY & PERSONAL CARE</span>
+                        </div>
+
+                        <div class="package-icon">💈</div>
+
+                        <h3>Barbershops & Salons</h3>
+
+                        <p class="package-description">
+                            Showcase your services, attract new clients
+                            and make booking enquiries easier.
+                        </p>
+
+                        <div class="package-price">
+                            <span>Development estimate</span>
+                            <strong>KSh 3,000 <small>–</small> 6,000</strong>
+                        </div>
+
+                        <div class="card-divider"></div>
+
+                        <h4>What's included</h4>
+
+                        <ul class="feature-list">
+                            <li>Services and price list</li>
+                            <li>Hairstyle and beauty gallery</li>
+                            <li>Opening hours and location</li>
+                            <li>WhatsApp booking enquiries</li>
+                            <li>Responsive mobile design</li>
+                        </ul>
+
+                        <button class="quote-button"
+                                type="button"
+                                data-category="Barbershops & Salons"
+                                data-price="KSh 3,000 – 6,000">
+                            Request This Package →
+                        </button>
+
+                    </article>
+
+
+                    <!-- 03 SHOPS -->
+                    <article class="pricing-card"
+                             data-category="business"
+                             data-search="shop boutique retail fashion clothing ecommerce products">
+
+                        <div class="card-top">
+                            <span class="package-number">03 / 09</span>
+                            <span class="package-type">RETAIL & COMMERCE</span>
+                        </div>
+
+                        <div class="package-icon">🛍️</div>
+
+                        <h3>Shops & Boutiques</h3>
+
+                        <p class="package-description">
+                            Present your products professionally
+                            and help customers discover what you sell.
+                        </p>
+
+                        <div class="package-price">
+                            <span>Development estimate</span>
+                            <strong>KSh 5,000 <small>–</small> 12,000</strong>
+                        </div>
+
+                        <div class="card-divider"></div>
+
+                        <h4>What's included</h4>
+
+                        <ul class="feature-list">
+                            <li>Product catalogue</li>
+                            <li>Product photos and prices</li>
+                            <li>Product categories</li>
+                            <li>WhatsApp ordering enquiries</li>
+                            <li>Basic customer enquiries</li>
+                        </ul>
+
+                        <button class="quote-button"
+                                type="button"
+                                data-category="Shops & Boutiques"
+                                data-price="KSh 5,000 – 12,000">
+                            Request This Package →
+                        </button>
+
+                    </article>
+
+
+                    <!-- 04 SCHOOLS -->
+                    <article class="pricing-card"
+                             data-category="organisation"
+                             data-search="school academy college university education training institution">
+
+                        <div class="card-top">
+                            <span class="package-number">04 / 09</span>
+                            <span class="package-type">EDUCATION</span>
+                        </div>
+
+                        <div class="package-icon">🎓</div>
+
+                        <h3>Schools & Academies</h3>
+
+                        <p class="package-description">
+                            Build a trusted online presence for your
+                            institution, programmes and admissions.
+                        </p>
+
+                        <div class="package-price">
+                            <span>Development estimate</span>
+                            <strong>KSh 6,000 <small>–</small> 15,000</strong>
+                        </div>
+
+                        <div class="card-divider"></div>
+
+                        <h4>What's included</h4>
+
+                        <ul class="feature-list">
+                            <li>Courses and programmes</li>
+                            <li>Admissions information</li>
+                            <li>Announcements section</li>
+                            <li>School photo gallery</li>
+                            <li>Contact information</li>
+                        </ul>
+
+                        <button class="quote-button"
+                                type="button"
+                                data-category="Schools & Academies"
+                                data-price="KSh 6,000 – 15,000">
+                            Request This Package →
+                        </button>
+
+                    </article>
+
+
+                    <!-- 05 CORPORATE -->
+                    <article class="pricing-card"
+                             data-category="business"
+                             data-search="corporate company enterprise professional agency organisation">
+
+                        <div class="card-top">
+                            <span class="package-number">05 / 09</span>
+                            <span class="package-type">CORPORATE</span>
+                        </div>
+
+                        <div class="package-icon">🏢</div>
+
+                        <h3>Corporate Businesses</h3>
+
+                        <p class="package-description">
+                            Establish a professional digital identity
+                            that communicates your company's value.
+                        </p>
+
+                        <div class="package-price">
+                            <span>Development estimate</span>
+                            <strong>KSh 5,000 <small>–</small> 15,000</strong>
+                        </div>
+
+                        <div class="card-divider"></div>
+
+                        <h4>What's included</h4>
+
+                        <ul class="feature-list">
+                            <li>Company profile and introduction</li>
+                            <li>Services and portfolio</li>
+                            <li>Customer enquiry section</li>
+                            <li>Professional presentation</li>
+                            <li>Responsive website design</li>
+                        </ul>
+
+                        <button class="quote-button"
+                                type="button"
+                                data-category="Corporate Businesses"
+                                data-price="KSh 5,000 – 15,000">
+                            Request This Package →
+                        </button>
+
+                    </article>
+
+
+                    <!-- 06 HOTELS -->
+                    <article class="pricing-card"
+                             data-category="business"
+                             data-search="hotel guest house lodge accommodation resort rooms travel">
+
+                        <div class="card-top">
+                            <span class="package-number">06 / 09</span>
+                            <span class="package-type">ACCOMMODATION</span>
+                        </div>
+
+                        <div class="package-icon">🏨</div>
+
+                        <h3>Hotels & Guest Houses</h3>
+
+                        <p class="package-description">
+                            Display your accommodation, amenities
+                            and booking enquiry information.
+                        </p>
+
+                        <div class="package-price">
+                            <span>Development estimate</span>
+                            <strong>KSh 6,000 <small>–</small> 15,000</strong>
+                        </div>
+
+                        <div class="card-divider"></div>
+
+                        <h4>What's included</h4>
+
+                        <ul class="feature-list">
+                            <li>Rooms and accommodation gallery</li>
+                            <li>Accommodation descriptions</li>
+                            <li>Amenities and location</li>
+                            <li>Booking enquiries</li>
+                            <li>Responsive website design</li>
+                        </ul>
+
+                        <button class="quote-button"
+                                type="button"
+                                data-category="Hotels & Guest Houses"
+                                data-price="KSh 6,000 – 15,000">
+                            Request This Package →
+                        </button>
+
+                    </article>
+
+
+                    <!-- 07 PORTFOLIOS -->
+                    <article class="pricing-card"
+                             data-category="personal"
+                             data-search="personal portfolio freelancer developer designer photographer cv resume">
+
+                        <div class="card-top">
+                            <span class="package-number">07 / 09</span>
+                            <span class="package-type">PERSONAL BRANDING</span>
+                        </div>
+
+                        <div class="package-icon">👨‍💻</div>
+
+                        <h3>Personal Portfolios</h3>
+
+                        <p class="package-description">
+                            Present your skills, achievements and
+                            professional work to the world.
+                        </p>
+
+                        <div class="package-price">
+                            <span>Development estimate</span>
+                            <strong>KSh 2,000 <small>–</small> 5,000</strong>
+                        </div>
+
+                        <div class="card-divider"></div>
+
+                        <h4>What's included</h4>
+
+                        <ul class="feature-list">
+                            <li>Personal introduction</li>
+                            <li>Skills and projects showcase</li>
+                            <li>CV download link</li>
+                            <li>Contact and social links</li>
+                            <li>Mobile-friendly design</li>
+                        </ul>
+
+                        <button class="quote-button"
+                                type="button"
+                                data-category="Personal Portfolios"
+                                data-price="KSh 2,000 – 5,000">
+                            Request This Package →
+                        </button>
+
+                    </article>
+
+
+                    <!-- 08 REAL ESTATE -->
+                    <article class="pricing-card"
+                             data-category="business"
+                             data-search="real estate property houses apartments rentals land agent">
+
+                        <div class="card-top">
+                            <span class="package-number">08 / 09</span>
+                            <span class="package-type">PROPERTY & REAL ESTATE</span>
+                        </div>
+
+                        <div class="package-icon">🏡</div>
+
+                        <h3>Real Estate & Property</h3>
+
+                        <p class="package-description">
+                            Make property discovery easier with
+                            professional online listings.
+                        </p>
+
+                        <div class="package-price">
+                            <span>Development estimate</span>
+                            <strong>KSh 5,000 <small>–</small> 12,000</strong>
+                        </div>
+
+                        <div class="card-divider"></div>
+
+                        <h4>What's included</h4>
+
+                        <ul class="feature-list">
+                            <li>Property listings</li>
+                            <li>Property photos and prices</li>
+                            <li>Property descriptions</li>
+                            <li>Viewing enquiries</li>
+                            <li>Contact and location information</li>
+                        </ul>
+
+                        <button class="quote-button"
+                                type="button"
+                                data-category="Real Estate & Property"
+                                data-price="KSh 5,000 – 12,000">
+                            Request This Package →
+                        </button>
+
+                    </article>
+
+
+                    <!-- 09 CLINICS -->
+                    <article class="pricing-card"
+                             data-category="organisation"
+                             data-search="clinic healthcare hospital medical dental health centre">
+
+                        <div class="card-top">
+                            <span class="package-number">09 / 09</span>
+                            <span class="package-type">HEALTHCARE</span>
+                        </div>
+
+                        <div class="package-icon">🏥</div>
+
+                        <h3>Clinics & Healthcare</h3>
+
+                        <p class="package-description">
+                            Help patients discover your services,
+                            opening hours and appointment contacts.
+                        </p>
+
+                        <div class="package-price">
+                            <span>Development estimate</span>
+                            <strong>KSh 5,000 <small>–</small> 12,000</strong>
+                        </div>
+
+                        <div class="card-divider"></div>
+
+                        <h4>What's included</h4>
+
+                        <ul class="feature-list">
+                            <li>Healthcare services and hours</li>
+                            <li>Staff information</li>
+                            <li>Location and directions</li>
+                            <li>Appointment enquiries</li>
+                            <li>Responsive website design</li>
+                        </ul>
+
+                        <button class="quote-button"
+                                type="button"
+                                data-category="Clinics & Healthcare"
+                                data-price="KSh 5,000 – 12,000">
+                            Request This Package →
+                        </button>
+
+                    </article>
+
+
+                    <!-- NO RESULTS MESSAGE -->
+                    <div class="no-results" id="noResults" hidden>
+
+                        <div class="no-results-icon">⌕</div>
+
+                        <h3>No matching packages found</h3>
+
+                        <p>
+                            Try another search term or select
+                            a different category.
+                        </p>
+
+                        <button type="button"
+                                class="btn btn-outline"
+                                id="resetFilters">
+                            View All Packages
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+        <!-- CLOSE PACKAGE DISCOVERY -->
+        </div>
+        </section>
+
+
+        <!-- CUSTOM PROJECT SECTION -->
+        <section class="section custom-project" id="custom-project">
+
+            <div class="container">
+
+                <div class="custom-project-card">
+
+                    <div class="custom-project-content">
+
+                        <span class="eyebrow">SOMETHING DIFFERENT?</span>
+
+                        <h2>
+                            Have a Bigger <span>Vision?</span>
+                        </h2>
+
+                        <p>
+                            Not every business fits into a standard package.
+                            Whether you need an advanced business platform,
+                            an online store, a booking system or a unique
+                            digital product, let's discuss your idea.
+                        </p>
+
+                        <ul class="custom-benefits">
+                            <li>Custom website development</li>
+                            <li>Advanced functionality and integrations</li>
+                            <li>Unique designs and digital experiences</li>
+                            <li>Project-based quotations</li>
+                        </ul>
+
+                        <a href="#quote-form" class="btn btn-primary">
+                            Build My Custom Project →
+                        </a>
+
+                    </div>
+
+                    <div class="custom-project-visual">
+
+                        <div class="visual-circle circle-one"></div>
+                        <div class="visual-circle circle-two"></div>
+
+                        <div class="visual-center">
+                            <span>J</span>
+                            <small>JONES TECHNOLOGY</small>
+                        </div>
+
+                        <div class="visual-label label-top">
+                            INNOVATION
+                        </div>
+
+                        <div class="visual-label label-bottom">
+                            DIGITAL GROWTH
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECT QUOTATION FORM -->
+        <section class="section quote-section" id="quote-form">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">LET'S GET STARTED</span>
+
+                    <h2>
+                        Request Your <span>Project Quote</span>
+                    </h2>
+
+                    <p>
+                        Tell us a little about your project.
+                        We'll use your information to understand
+                        what you need and prepare a suitable quotation.
+                    </p>
+
+                </div>
+
+
+                <div class="quote-layout">
+
+                    <!-- FORM -->
+                    <form id="projectQuoteForm" class="quote-form">
+
+                        <div class="form-heading">
+                            <span>PROJECT BRIEF</span>
+                            <h3>Tell Us About Your Idea</h3>
+                            <p>Fields marked * are required.</p>
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="clientName">
+                                    Your Name *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="clientName"
+                                    name="clientName"
+                                    placeholder="Enter your name"
+                                    maxlength="80"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="businessName">
+                                    Business / Organisation Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="businessName"
+                                    name="businessName"
+                                    placeholder="Your business name"
+                                    maxlength="100"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="clientEmail">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="clientEmail"
+                                    name="clientEmail"
+                                    placeholder="you@example.com"
+                                    maxlength="120"
+                                    autocomplete="email"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="clientPhone">
+                                    Contact Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="clientPhone"
+                                    name="clientPhone"
+                                    placeholder="+254..."
+                                    maxlength="25"
+                                    autocomplete="tel"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group full-width">
+
+                                <label for="projectCategory">
+                                    Project Category *
+                                </label>
+
+                                <select
+                                    id="projectCategory"
+                                    name="projectCategory"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select a project category
+                                    </option>
+
+                                    <option value="Restaurants & Cafés">
+                                        Restaurants & Cafés
+                                    </option>
+
+                                    <option value="Barbershops & Salons">
+                                        Barbershops & Salons
+                                    </option>
+
+                                    <option value="Shops & Boutiques">
+                                        Shops & Boutiques
+                                    </option>
+
+                                    <option value="Schools & Academies">
+                                        Schools & Academies
+                                    </option>
+
+                                    <option value="Corporate Businesses">
+                                        Corporate Businesses
+                                    </option>
+
+                                    <option value="Hotels & Guest Houses">
+                                        Hotels & Guest Houses
+                                    </option>
+
+                                    <option value="Personal Portfolios">
+                                        Personal Portfolios
+                                    </option>
+
+                                    <option value="Real Estate & Property">
+                                        Real Estate & Property
+                                    </option>
+
+                                    <option value="Clinics & Healthcare">
+                                        Clinics & Healthcare
+                                    </option>
+
+                                    <option value="Custom Website Project">
+                                        Custom Website Project
+                                    </option>
+
+                                    <option value="Other Digital Solution">
+                                        Other Digital Solution
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="projectBudget">
+                                    Estimated Budget
+                                </label>
+
+                                <select
+                                    id="projectBudget"
+                                    name="projectBudget"
+                                >
+
+                                    <option value="">
+                                        Select your budget
+                                    </option>
+
+                                    <option value="Below KSh 5,000">
+                                        Below KSh 5,000
+                                    </option>
+
+                                    <option value="KSh 5,000 – 10,000">
+                                        KSh 5,000 – 10,000
+                                    </option>
+
+                                    <option value="KSh 10,000 – 20,000">
+                                        KSh 10,000 – 20,000
+                                    </option>
+
+                                    <option value="KSh 20,000 – 50,000">
+                                        KSh 20,000 – 50,000
+                                    </option>
+
+                                    <option value="Above KSh 50,000">
+                                        Above KSh 50,000
+                                    </option>
+
+                                    <option value="Not sure yet">
+                                        Not sure yet
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="launchTimeline">
+                                    Expected Launch
+                                </label>
+
+                                <select
+                                    id="launchTimeline"
+                                    name="launchTimeline"
+                                >
+
+                                    <option value="">
+                                        Select a timeline
+                                    </option>
+
+                                    <option value="As soon as possible">
+                                        As soon as possible
+                                    </option>
+
+                                    <option value="Within 1 week">
+                                        Within 1 week
+                                    </option>
+
+                                    <option value="Within 2–4 weeks">
+                                        Within 2–4 weeks
+                                    </option>
+
+                                    <option value="Within 1–3 months">
+                                        Within 1–3 months
+                                    </option>
+
+                                    <option value="Flexible">
+                                        Flexible
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group full-width">
+
+                                <label for="projectFeatures">
+                                    Required Features / Project Description *
+                                </label>
+
+                                <textarea
+                                    id="projectFeatures"
+                                    name="projectFeatures"
+                                    rows="5"
+                                    maxlength="1500"
+                                    placeholder="Describe the website or digital solution you need..."
+                                    required
+                                ></textarea>
+
+                                <div class="character-count">
+                                    <span id="characterCount">0</span>/1500
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <label class="consent-label">
+
+                            <input
+                                type="checkbox"
+                                id="quoteConsent"
+                                required
+                            >
+
+                            <span>
+                                I agree to share these project details
+                                with Jones Technology through WhatsApp
+                                for quotation purposes.
+                            </span>
+
+                        </label>
+
+
+                        <button type="submit"
+                                class="btn btn-primary quote-submit">
+
+                            Send Project Enquiry
+                            <span>→</span>
+
+                        </button>
+
+
+                        <p class="form-disclaimer">
+                            This form prepares a WhatsApp message.
+                            It does not process payments or save
+                            your information in a website database.
+                        </p>
+
+                    </form>
+
+
+                    <!-- CONTACT INFORMATION -->
+                    <aside class="quote-sidebar">
+
+                        <div class="sidebar-card">
+
+                            <span class="sidebar-label">
+                                DIRECT CONTACT
+                            </span>
+
+                            <h3>Let's Talk Business.</h3>
+
+                            <p>
+                                Have questions before requesting a quote?
+                                Contact our team directly.
+                            </p>
+
+                            <div class="contact-detail">
+
+                                <span class="detail-icon">✆</span>
+
+                                <div>
+                                    <small>WhatsApp / Phone</small>
+                                    <strong>+254 771 776 861</strong>
+                                </div>
+
+                            </div>
+
+
+                            <div class="contact-detail">
+
+                                <span class="detail-icon">🌍</span>
+
+                                <div>
+                                    <small>Service Coverage</small>
+                                    <strong>Kenya & Worldwide</strong>
+                                </div>
+
+                            </div>
+
+
+                            <a
+                                href="https://wa.me/254771776861"
+                                class="btn btn-outline sidebar-whatsapp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Chat on WhatsApp
+                            </a>
+
+                        </div>
+
+
+                        <div class="sidebar-note">
+
+                            <span>✦</span>
+
+                            <div>
+                                <strong>Our Approach</strong>
+
+                                <p>
+                                    Understand your vision.
+                                    Plan the solution.
+                                    Build with purpose.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRICING CONDITIONS -->
+        <section class="section pricing-conditions" id="conditions">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">TRANSPARENCY MATTERS</span>
+
+                    <h2>
+                        Understand Your <span>Investment</span>
+                    </h2>
+
+                    <p>
+                        We want every client to understand
+                        what their website development price covers.
+                    </p>
+
+                </div>
+
+
+                <div class="conditions-grid">
+
+                    <article class="condition-card">
+
+                        <div class="condition-icon">✓</div>
+
+                        <h3>Development Scope</h3>
+
+                        <p>
+                            The listed packages describe the proposed
+                            features and development scope. Final
+                            deliverables will be agreed upon before
+                            work begins.
+                        </p>
+
+                    </article>
+
+
+                    <article class="condition-card">
+
+                        <div class="condition-icon">⌘</div>
+
+                        <h3>Domain & Hosting</h3>
+
+                        <p>
+                            Domain registration, renewals and paid
+                            hosting are separate costs unless
+                            specifically included in your quotation.
+                        </p>
+
+                    </article>
+
+
+                    <article class="condition-card">
+
+                        <div class="condition-icon">⚙</div>
+
+                        <h3>Advanced Features</h3>
+
+                        <p>
+                            Online payments, databases, user accounts,
+                            APIs, booking engines and advanced integrations
+                            may require a separate quotation.
+                        </p>
+
+                    </article>
+
+
+                    <article class="condition-card">
+
+                        <div class="condition-icon">◆</div>
+
+                        <h3>Final Quotation</h3>
+
+                        <p>
+                            We confirm the project requirements,
+                            deliverables, price and expected timeline
+                            with the client before development starts.
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <div class="conditions-footnote">
+
+                    <strong>Important:</strong>
+
+                    Prices shown on this page are indicative estimates,
+                    not guaranteed fixed offers. Third-party services,
+                    premium templates, content production, transaction
+                    charges and external subscriptions are not included
+                    unless expressly stated in the agreed quotation.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL CALL TO ACTION -->
+        <section class="final-cta">
+
+            <div class="container">
+
+                <span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
+
+                <h2>
+                    Ready to Take Your Business <span>Online?</span>
+                </h2>
+
+                <p>
+                    Let's turn your idea into a professional
+                    digital experience.
+                </p>
+
+                <a href="#quote-form" class="btn btn-primary">
+                    Start Your Project →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+
+            <div class="container footer-inner">
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="brand">
+                        <span class="brand-name">
+                            JONES <span>TECHNOLOGY</span>
+                        </span>
+
+                        <span class="brand-caption">
+                            INNOVATION WITHOUT LIMITS
+                        </span>
+                    </a>
+
+                    <p>
+                        Building digital solutions for businesses,
+                        entrepreneurs and organisations.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <a href="index.html">Home</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="#packages">Pricing</a>
+                    <a href="#quote-form">Contact</a>
+
+                </div>
+
+              <div class="footer-parent">
+
+                    <span>A VENTURE UNDER</span>
+
+                    <strong>JONES GROUP HOLDINGS</strong>
+
+                    <p>
+                        INNOVATE. INVEST. IMPACT. INSPIRE.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <div class="container">
+
+                    <p>
+                        © <span id="currentYear">2026</span>
+                        Jones Technology. All rights reserved.
+                    </p>
+
+                    <span>
+                        BUILDING TOMORROW. EMPOWERING GENERATIONS.
+                    </span>
+
+                </div>
+                 </div>
+
+        </footer>
+
+    </main>
+
+
+  
+    <!-- =========================================
+         JONES TECHNOLOGY
+         FINAL PRICING PAGE STYLES
+    ========================================== -->
+
+    <style>
+
+        /* PRICING GRID */
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            min-width: 0;
+            padding: 25px;
+
+            background: linear-gradient(
+                145deg,
+                #181818,
+                #101010
+            );
+
+            border: 1px solid #292929;
+            border-radius: var(--radius-medium);
+
+            transition: var(--transition);
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 3px;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                var(--gold),
+                transparent
+            );
+
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-7px);
+            border-color: var(--gold);
+            box-shadow: var(--shadow);
+        }
+
+        .pricing-card:hover::before {
+            opacity: 1;
+        }
+
+        .pricing-card[hidden] {
+            display: none !important;
+        }
+
+        .card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .package-number {
+            color: var(--gold);
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .package-type {
+            color: var(--muted);
+            font-size: 0.59rem;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+        }
+
+        .package-icon {
+            display: grid;
+            place-items: center;
+
+            width: 58px;
+            height: 58px;
+
+            margin: 25px 0 17px;
+
+            background: var(--gold-glow);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+
+            font-size: 1.8rem;
+        }
+
+        .pricing-card h3 {
+            color: var(--white);
+            font-family: "Playfair Display", serif;
+            font-size: 1.35rem;
+            line-height: 1.3;
+            margin-bottom: 12px;
+        }
+
+        .package-description {
+            min-height: 76px;
+            color: var(--muted);
+            font-size: 0.84rem;
+            line-height: 1.8;
+        }
+
+        .package-price {
+            margin: 22px 0 18px;
+        }
+
+        .package-price span {
+            display: block;
+            color: var(--muted);
+            font-size: 0.7rem;
+            margin-bottom: 5px;
+        }
+
+        .package-price strong {
+            color: var(--gold-light);
+            font-size: 1.38rem;
+            font-weight: 800;
+        }
+
+        .package-price small {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .card-divider {
+            height: 1px;
+            background: #303030;
+            margin-bottom: 18px;
+        }
+
+        .pricing-card h4 {
+            color: var(--white);
+            font-size: 0.87rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 25px;
+            flex: 1;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 23px;
+            margin-bottom: 11px;
+
+            color: #c2c2c2;
+            font-size: 0.79rem;
+            line-height: 1.6;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            color: var(--gold);
+            font-weight: 900;
+        }
+
+        .quote-button {
+            width: 100%;
+            min-height: 48px;
+            padding: 12px;
+
+            color: var(--gold);
+            background: transparent;
+
+            border: 1px solid var(--gold);
+            border-radius: 8px;
+
+            font-weight: 800;
+            font-size: 0.8rem;
+
+            transition: var(--transition);
+        }
+
+        .quote-button:hover {
+            color: #111;
+            background: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        /* EMPTY SEARCH RESULTS */
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+
+            background: var(--black-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-medium);
+        }
+
+        .no-results[hidden] {
+            display: none !important;
+        }
+
+        .no-results-icon {
+            color: var(--gold);
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .no-results h3 {
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .no-results p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+
+        /* CUSTOM PROJECT */
+
+        .custom-project {
+            background: #0d0d0d;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+        }
+
+        .custom-project-card {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 35px;
+            align-items: center;
+
+            padding: 55px;
+
+            background:
+                radial-gradient(
+                    circle at 90% 50%,
+                    rgba(214,173,85,0.13),
+                    transparent 35%
+                ),
+                #151515;
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius-large);
+            overflow: hidden;
+        }
+
+        .custom-project-content h2 {
+            color: var(--white);
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .custom-project-content h2 span {
+            color: var(--gold);
+        }
+
+        .custom-project-content > p {
+            color: var(--muted);
+            font-size: 0.92rem;
+            margin-bottom: 22px;
+        }
+
+        .custom-benefits {
+            list-style: none;
+            margin-bottom: 27px;
+        }
+
+        .custom-benefits li {
+            color: #d0d0d0;
+            margin-bottom: 10px;
+            font-size: 0.84rem;
+        }
+
+        .custom-benefits li::before {
+            content: "✦";
+            color: var(--gold);
+            margin-right: 10px;
+        }
+
+        .custom-project-visual {
+            position: relative;
+            min-height: 310px;
+
+            display: grid;
+            place-items: center;
+        }
+
+        .visual-circle {
+            position: absolute;
+            border: 1px solid rgba(214,173,85,0.3);
+            border-radius: 50%;
+        }
+
+        .circle-one {
+            width: 240px;
+            height: 240px;
+        }
+
+        .circle-two {
+            width: 180px;
+            height: 180px;
+            border-style: dashed;
+            animation: orbit 25s linear infinite;
+        }
+
+        .visual-center {
+            position: relative;
+            z-index: 2;
+
+            width: 120px;
+            height: 120px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background: linear-gradient(
+                145deg,
+                var(--gold-light),
+                var(--gold-dark)
+            );
+
+            border-radius: 50%;
+            box-shadow: 0 0 55px rgba(214,173,85,0.2);
+        }
+
+        .visual-center span {
+            color: #111;
+            font-family: "Playfair Display", serif;
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        .visual-center small {
+            color: #111;
+            font-size: 0.42rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .visual-label {
+            position: absolute;
+            z-index: 3;
+
+            padding: 7px 12px;
+
+            color: var(--gold-light);
+            background: #202020;
+
+            border: 1px solid var(--border);
+            border-radius: 30px;
+
+            font-size: 0.6rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .label-top {
+            top: 25px;
+            right: 0;
+        }
+
+        .label-bottom {
+            bottom: 25px;
+            left: 0;
+        }
+
+        @keyframes orbit {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        /* QUOTE FORM */
+
+        .quote-layout {
+            display: grid;
+            grid-template-columns: 1.6fr 0.8fr;
+            gap: 25px;
+            align-items: start;
+        }
+
+        .quote-form {
+            padding: 32px;
+
+            background: var(--black-card);
+            border: 1px solid #292929;
+            border-radius: var(--radius-medium);
+        }
+
+        .form-heading {
+            margin-bottom: 28px;
+        }
+
+        .form-heading > span {
+            color: var(--gold);
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .form-heading h3 {
+            color: var(--white);
+            font-family: "Playfair Display", serif;
+            font-size: 1.8rem;
+            margin: 7px 0;
+        }
+
+        .form-heading p {
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            color: #dedede;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            min-height: 48px;
+
+            padding: 13px 14px;
+
+            color: var(--white);
+            background: #0c0c0c;
+
+            border: 1px solid #333;
+            border-radius: 8px;
+
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px var(--gold-glow);
+        }
+
+        .form-group select option {
+            background: #111;
+            color: white;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #777;
+        }
+
+        .character-count {
+            color: var(--muted);
+            text-align: right;
+            font-size: 0.7rem;
+        }
+
+        .consent-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+
+            margin: 25px 0;
+
+            color: var(--muted);
+            font-size: 0.76rem;
+        }
+
+        .consent-label input {
+            margin-top: 4px;
+            accent-color: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .quote-submit {
+            width: 100%;
+            border: none;
+        }
+
+        .form-disclaimer {
+            color: #858585;
+            text-align: center;
+            font-size: 0.7rem;
+            margin-top: 15px;
+        }
+
+
+        /* QUOTE SIDEBAR */
+
+        .quote-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .sidebar-card {
+            padding: 28px;
+
+            background: linear-gradient(
+                145deg,
+                #1a1a1a,
+                #101010
+            );
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius-medium);
+        }
+
+        .sidebar-label {
+            color: var(--gold);
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .sidebar-card h3 {
+            color: var(--white);
+            font-family: "Playfair Display", serif;
+            font-size: 1.7rem;
+            margin: 12px 0;
+        }
+
+        .sidebar-card > p {
+            color: var(--muted);
+            font-size: 0.84rem;
+            margin-bottom: 25px;
+        }
+
+        .contact-detail {
+            display: flex;
+            gap: 13px;
+            align-items: center;
+
+            margin: 20px 0;
+        }
+
+        .detail-icon {
+            display: grid;
+            place-items: center;
+
+            width: 42px;
+            height: 42px;
+
+            color: var(--gold);
+            background: var(--gold-glow);
+
+            border-radius: 10px;
+        }
+
+        .contact-detail div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-detail small {
+            color: var(--muted);
+            font-size: 0.7rem;
+        }
+
+        .contact-detail strong {
+            color: var(--white);
+            font-size: 0.88rem;
+        }
+
+        .sidebar-whatsapp {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .sidebar-note {
+            display: flex;
+            gap: 13px;
+
+            padding: 20px;
+
+            background: var(--gold-glow);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-medium);
+        }
+
+        .sidebar-note > span {
+            color: var(--gold);
+            font-size: 1.3rem;
+        }
+
+        .sidebar-note strong {
+            color: var(--gold-light);
+            font-size: 0.87rem;
+        }
+
+        .sidebar-note p {
+            color: var(--muted);
+            font-size: 0.78rem;
+            margin-top: 5px;
+        }
+
+
+        /* CONDITIONS */
+
+        .pricing-conditions {
+            background: #0d0d0d;
+        }
+
+        .conditions-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 17px;
+        }
+
+        .condition-card {
+            padding: 23px;
+
+            background: var(--black-card);
+            border: 1px solid #292929;
+            border-radius: var(--radius-medium);
+        }
+
+        .condition-icon {
+            width: 42px;
+            height: 42px;
+
+            display: grid;
+            place-items: center;
+
+            color: #111;
+            background: var(--gold);
+
+            border-radius: 11px;
+            font-size: 1.1rem;
+            font-weight: 900;
+
+            margin-bottom: 18px;
+        }
+
+        .condition-card h3 {
+            color: var(--white);
+            font-size: 0.94rem;
+            margin-bottom: 10px;
+        }
+
+        .condition-card p {
+            color: var(--muted);
+            font-size: 0.78rem;
+            line-height: 1.8;
+        }
+
+        .conditions-footnote {
+            margin-top: 25px;
+            padding: 19px;
+
+            color: var(--muted);
+            background: #171717;
+
+            border-left: 3px solid var(--gold);
+            border-radius: 5px;
+
+            font-size: 0.79rem;
+            line-height: 1.8;
+        }
+
+        .conditions-footnote strong {
+            color: var(--gold-light);
+        }
+
+
+        /* FINAL CTA */
+
+        .final-cta {
+            padding: 85px 0;
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    ellipse at center,
+                    rgba(214,173,85,0.13),
+                    transparent 65%
+                );
+        }
+
+        .final-cta h2 {
+            color: var(--white);
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 1.2;
+            margin: 15px 0;
+        }
+
+        .final-cta h2 span {
+            color: var(--gold);
+        }
+
+        .final-cta p {
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
+
+
+        /* FOOTER */
+
+        .site-footer {
+            background: #050505;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-inner {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr 1fr;
+            gap: 30px;
+
+            padding-top: 55px;
+            padding-bottom: 45px;
+        }
+
+        .footer-brand > p {
+            max-width: 330px;
+            color: var(--muted);
+            font-size: 0.8rem;
+            margin-top: 17px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--muted);
+            font-size: 0.82rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-parent {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-parent > span {
+            color: var(--muted);
+            font-size: 0.65rem;
+            letter-spacing: 1.5px;
+        }
+
+        .footer-parent strong {
+            color: var(--gold);
+            font-size: 0.95rem;
+        }
+
+        .footer-parent p {
+            color: var(--muted);
+            font-size: 0.69rem;
+            letter-spacing: 1px;
+        }
+
+        .footer-bottom {
+            padding: 18px 0;
+            border-top: 1px solid #242424;
+        }
+
+        .footer-bottom .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom p,
+        .footer-bottom span {
+            color: #858585;
+            font-size: 0.7rem;
+        }
+
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 1000px) {
+
+            .pricing-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .conditions-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .custom-project-card {
+                padding: 35px;
+            }
+
+        }
+
+        @media (max-width: 750px) {
+
+            .custom-project-card {
+                grid-template-columns: 1fr;
+            }
+
+            .custom-project-visual {
+                min-height: 250px;
+            }
+
+            .quote-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-parent {
+                grid-column: 1 / -1;
+            }
+
+        }
+
+        @media (max-width: 520px) {
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card {
+                padding: 23px;
+            }
+
+            .package-description {
+                min-height: auto;
+            }
+
+            .custom-project-card {
+                padding: 25px 20px;
+            }
+
+            .custom-project-visual {
+                min-height: 220px;
+            }
+
+            .circle-one {
+                width: 190px;
+                height: 190px;
+            }
+
+            .circle-two {
+                width: 145px;
+                height: 145px;
+            }
+
+            .visual-center {
+                width: 100px;
+                height: 100px;
+            }
+
+            .visual-center span {
+                font-size: 2.4rem;
+            }
+
+            .quote-form {
+                padding: 22px 17px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full-width {
+                grid-column: auto;
+            }
+
+            .conditions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-parent {
+                grid-column: auto;
+            }
+
+            .footer-bottom .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+        }
+
+    </style>
+    
+    <!-- =========================================
+         JONES TECHNOLOGY
+         PRICING PAGE JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        "use strict";
+
+
+        /* =====================================
+           1. CENTRAL CONFIGURATION
+        ====================================== */
+
+        const JONES_PRICING_CONFIG = Object.freeze({
+
+            whatsappNumber: "254771776861",
+
+            brand: "Jones Technology",
+
+            parentCompany: "Jones Group Holdings",
+
+            currency: "KSh"
+
+        });
+
+
+        /* =====================================
+           2. DOM ELEMENTS
+        ====================================== */
+
+        const packageSearch =
+            document.getElementById("packageSearch");
+
+        const clearSearch =
+            document.getElementById("clearSearch");
+
+        const categoryFilters =
+            document.getElementById("categoryFilters");
+
+        const pricingGrid =
+            document.getElementById("pricingGrid");
+
+        const resultCount =
+            document.getElementById("resultCount");
+
+        const noResults =
+            document.getElementById("noResults");
+
+        const resetFilters =
+            document.getElementById("resetFilters");
+
+        const quoteForm =
+            document.getElementById("projectQuoteForm");
+
+        const projectCategory =
+            document.getElementById("projectCategory");
+
+        const projectFeatures =
+            document.getElementById("projectFeatures");
+
+        const characterCount =
+            document.getElementById("characterCount");
+
+
+        /* =====================================
+           3. PACKAGE SEARCH AND FILTERING
+        ====================================== */
+
+        let activeFilter = "all";
+
+
+        function filterPackages() {
+
+            if (!pricingGrid) return;
+
+            const searchTerm = packageSearch
+                ? packageSearch.value.trim().toLowerCase()
+                : "";
+
+            const cards = pricingGrid.querySelectorAll(
+                ".pricing-card"
+            );
+
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+
+                const category =
+                    card.dataset.category || "";
+
+                const searchableText = (
+                    (card.dataset.search || "") +
+                    " " +
+                    card.textContent
+                ).toLowerCase();
+
+                const matchesSearch =
+                    searchableText.includes(searchTerm);
+
+                const matchesCategory =
+                    activeFilter === "all" ||
+                    category === activeFilter;
+
+                const shouldShow =
+                    matchesSearch && matchesCategory;
+
+                card.hidden = !shouldShow;
+
+                if (shouldShow) {
+                    visibleCount++;
+                }
+
+            });
+
+
+            if (resultCount) {
+                resultCount.textContent = visibleCount;
+            }
+
+            if (noResults) {
+                noResults.hidden = visibleCount !== 0;
+            }
+
+            if (clearSearch) {
+                clearSearch.classList.toggle(
+                    "visible",
+                    searchTerm.length > 0
+                );
+            }
+
+        }
+
+
+        if (packageSearch) {
+
+            packageSearch.addEventListener(
+                "input",
+                filterPackages
+            );
+
+        }
+
+
+        if (clearSearch) {
+
+            clearSearch.addEventListener("click", () => {
+
+                packageSearch.value = "";
+
+                filterPackages();
+
+                packageSearch.focus();
+
+            });
+
+        }
+
+
+        if (categoryFilters) {
+
+            categoryFilters.addEventListener(
+                "click",
+                event => {
+
+                    const button = event.target.closest(
+                        ".filter-btn"
+                    );
+
+                    if (!button) return;
+
+                    activeFilter = button.dataset.filter;
+
+                    categoryFilters
+                        .querySelectorAll(".filter-btn")
+                        .forEach(filterButton => {
+
+                            const isActive =
+                                filterButton === button;
+
+                            filterButton.classList.toggle(
+                                "active",
+                                isActive
+                            );
+
+                            filterButton.setAttribute(
+                                "aria-pressed",
+                                String(isActive)
+                            );
+
+                        });
+
+                    filterPackages();
+
+                }
+            );
+
+        }
+
+
+        function resetPackageFilters() {
+
+            activeFilter = "all";
+
+            if (packageSearch) {
+                packageSearch.value = "";
+            }
+
+            if (categoryFilters) {
+
+                categoryFilters
+                    .querySelectorAll(".filter-btn")
+                    .forEach(button => {
+
+                        const isActive =
+                            button.dataset.filter === "all";
+
+                        button.classList.toggle(
+                            "active",
+                            isActive
+                        );
+
+                        button.setAttribute(
+                            "aria-pressed",
+                            String(isActive)
+                        );
+
+                    });
+
+            }
+
+            filterPackages();
+
+        }
+
+
+        if (resetFilters) {
+
+            resetFilters.addEventListener(
+                "click",
+                resetPackageFilters
+            );
+
+        }
+
+
+        /* =====================================
+           4. PACKAGE QUOTATION BUTTONS
+        ====================================== */
+
+        document
+            .querySelectorAll(".quote-button")
+            .forEach(button => {
+
+                button.addEventListener("click", () => {
+
+                    const category =
+                        button.dataset.category || "";
+
+                    if (projectCategory) {
+                        projectCategory.value = category;
+                    }
+
+                    if (projectFeatures) {
+
+                        projectFeatures.value =
+                            "I am interested in the " +
+                            category +
+                            " website package.";
+
+                        updateCharacterCount();
+
+                    }
+
+                    const quoteSection =
+                        document.getElementById("quote-form");
+
+                    if (quoteSection) {
+
+                        quoteSection.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+
+                    }
+
+                });
+
+            });
+
+
+        /* =====================================
+           5. CHARACTER COUNTER
+        ====================================== */
+
+        function updateCharacterCount() {
+
+            if (!projectFeatures || !characterCount) {
+                return;
+            }
+
+            characterCount.textContent =
+                projectFeatures.value.length;
+
+        }
+
+
+        if (projectFeatures) {
+
+            projectFeatures.addEventListener(
+                "input",
+                updateCharacterCount
+            );
+
+        }
+
+
+        /* =====================================
+           6. WHATSAPP MESSAGE GENERATOR
+        ====================================== */
+
+        function sendWhatsAppMessage(message) {
+
+            const encodedMessage =
+                encodeURIComponent(message);
+
+            const whatsappURL =
+                "https://wa.me/" +
+                JONES_PRICING_CONFIG.whatsappNumber +
+                "?text=" +
+                encodedMessage;
+
+            window.location.href = whatsappURL;
+
+        }
+
+
+        /* =====================================
+           7. PROJECT QUOTATION FORM
+        ====================================== */
+
+        if (quoteForm) {
+
+            quoteForm.addEventListener(
+                "submit",
+                event => {
+
+                    event.preventDefault();
+
+                    if (!quoteForm.reportValidity()) {
+                        return;
+                    }
+
+
+                    const clientName =
+                        document.getElementById("clientName")
+                            .value.trim();
+
+                    const businessName =
+                        document.getElementById("businessName")
+                            .value.trim();
+
+                    const clientEmail =
+                        document.getElementById("clientEmail")
+                            .value.trim();
+
+                    const clientPhone =
+                        document.getElementById("clientPhone")
+                            .value.trim();
+
+                    const category =
+                        projectCategory.value;
+
+                    const budget =
+                        document.getElementById("projectBudget")
+                            .value || "Not specified";
+
+                    const timeline =
+                        document.getElementById("launchTimeline")
+                            .value || "Not specified";
+
+                    const features =
+                        projectFeatures.value.trim();
+
+                    const consent =
+                        document.getElementById("quoteConsent");
+
+
+                    if (!consent.checked) {
+
+                        consent.focus();
+
+                        return;
+
+                    }
+
+
+                    const message =
+
+                        "Hello Jones Technology!\n\n" +
+
+                        "I would like to request a website " +
+                        "development quotation.\n\n" +
+
+                        "PROJECT DETAILS\n" +
+
+                        "Name: " + clientName + "\n" +
+
+                        "Business: " +
+                        (businessName || "Not provided") +
+                        "\n" +
+
+                        "Email: " +
+                        (clientEmail || "Not provided") +
+                        "\n" +
+
+                        "Phone: " +
+                        (clientPhone || "Not provided") +
+                        "\n" +
+
+                        "Category: " + category + "\n" +
+
+                        "Estimated Budget: " + budget + "\n" +
+
+                        "Expected Launch: " + timeline + "\n\n" +
+
+                        "PROJECT REQUIREMENTS\n" +
+
+                        features + "\n\n" +
+
+                        "Please review my requirements and " +
+                        "share a suitable quotation.\n\n" +
+
+                        "Thank you.\n\n" +
+
+                        JONES_PRICING_CONFIG.brand;
+
+
+                    sendWhatsAppMessage(message);
+
+                }
+
+            );
+
+        }
+
+
+        /* =====================================
+           8. COPYRIGHT YEAR
+        ====================================== */
+
+        const currentYear =
+            document.getElementById("currentYear");
+
+        if (currentYear) {
+
+            currentYear.textContent =
+                new Date().getFullYear();
+
+        }
+
+
+        /* =====================================
+           9. INITIAL PAGE SETUP
+        ====================================== */
+
+        filterPackages();
+
+        updateCharacterCount();
+
+
+        console.log(
+            "Jones Technology Pricing Page loaded successfully."
+        );
+
+    </script>
+
+</body>
+</html>
