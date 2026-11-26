@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080600">
-<meta name="description" content="JT Academy — A new era of technology learning is coming.">
-<title>JT Academy | The Future of Learning</title>
+<meta name="theme-color" content="#07111f">
+<meta name="description" content="Jones Technology Academy — Coming Soon. Brought to you by Jones Technology under Jones Group Holdings.">
+<title>Jones Technology Academy | Coming Soon</title>
 
 <style>
 :root {
-  --gold: #d4af37;
-  --bright: #ffe6a0;
-  --muted: #c4bda9;
-  --background: #080600;
+  --night: #07111f;
+  --blue: #12304d;
+  --cyan: #65dcff;
+  --white: #f3f8ff;
+  --muted: #a8b9cc;
 }
 
 * {
@@ -25,8 +26,8 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: var(--background);
-  color: #fff;
+  background: var(--night);
+  color: var(--white);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -37,99 +38,101 @@ html, body {
   height: 100vh;
   height: 100dvh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background:
-    radial-gradient(ellipse at 50% 45%,
-      #493611 0%,
-      #1b1407 38%,
-      #080600 78%);
+    radial-gradient(ellipse at 78% 20%, #16466a 0%, transparent 36%),
+    radial-gradient(ellipse at 15% 85%, #102b48 0%, transparent 38%),
+    linear-gradient(135deg, #050b14, #0a1b2d 55%, #07111f);
 }
 
-.ambient-light {
+.architecture {
   position: absolute;
-  inset: -30%;
-  z-index: -3;
-  background:
-    radial-gradient(circle at 25% 35%,
-      rgba(212,175,55,.19), transparent 30%),
-    radial-gradient(circle at 75% 65%,
-      rgba(255,190,55,.13), transparent 35%);
-  animation: ambientMove 12s ease-in-out infinite alternate;
-}
-
-@keyframes ambientMove {
-  from { transform: translate(-2%, 1%) scale(1); }
-  to { transform: translate(2%, -1%) scale(1.12); }
-}
-
-.grid {
-  position: absolute;
-  inset: -100%;
+  inset: 0;
   z-index: -2;
-  opacity: .48;
-  background-image:
-    linear-gradient(rgba(212,175,55,.09) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212,175,55,.09) 1px, transparent 1px);
-  background-size: 48px 48px;
-  transform: perspective(600px) rotateX(12deg);
-  animation: gridMove 18s linear infinite;
-  mask-image: linear-gradient(transparent, black 30%, black 75%, transparent);
+  overflow: hidden;
+  perspective: 900px;
 }
 
-@keyframes gridMove {
-  from { background-position: 0 0; }
-  to { background-position: 48px 48px; }
-}
-
-.particle {
+.architecture::before,
+.architecture::after {
+  content: "";
   position: absolute;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--gold);
-  box-shadow: 0 0 12px var(--gold), 0 0 28px #ffb52e;
-  animation: floatParticle 6s ease-in-out infinite alternate;
+  width: 70vw;
+  height: 150vh;
+  top: -25vh;
+  border: 1px solid rgba(101,220,255,.13);
+  transform: rotateY(-35deg) rotateZ(18deg);
+  box-shadow:
+    0 0 70px rgba(39,156,210,.06),
+    inset 0 0 70px rgba(39,156,210,.04);
 }
 
-.p1 { top: 20%; left: 10%; }
-.p2 { top: 70%; left: 20%; animation-delay: -2s; }
-.p3 { top: 30%; right: 15%; animation-delay: -3s; }
-.p4 { bottom: 20%; right: 30%; animation-delay: -1s; }
-.p5 { top: 50%; left: 50%; animation-delay: -4s; }
-.p6 { top: 15%; right: 35%; animation-delay: -2.5s; }
-.p7 { bottom: 15%; left: 40%; animation-delay: -3.5s; }
-.p8 { top: 80%; right: 12%; animation-delay: -2s; }
-.p9 { top: 42%; left: 7%; animation-delay: -1s; }
+.architecture::before {
+  left: -28vw;
+  animation: architectureShift 18s ease-in-out infinite alternate;
+}
 
-@keyframes floatParticle {
-  from { transform: translateY(0) scale(.7); opacity: .3; }
-  to { transform: translateY(-70px) scale(1.7); opacity: 1; }
+.architecture::after {
+  right: -30vw;
+  transform: rotateY(35deg) rotateZ(-18deg);
+  animation: architectureShift 22s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes architectureShift {
+  from { translate: 0 0; }
+  to { translate: 0 -22px; }
+}
+
+.light-beam {
+  position: absolute;
+  z-index: -1;
+  top: -40%;
+  left: -35%;
+  width: 70%;
+  height: 180%;
+  transform: rotate(28deg);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(80,199,255,.035),
+    rgba(80,199,255,.12),
+    transparent
+  );
+  filter: blur(18px);
+  animation: lightSweep 12s ease-in-out infinite;
+}
+
+@keyframes lightSweep {
+  0%, 100% { left: -50%; opacity: .2; }
+  50% { left: 100%; opacity: .9; }
 }
 
 .top-label {
   position: absolute;
-  top: 22px;
-  left: 22px;
+  top: 25px;
+  left: 25px;
   z-index: 5;
-  color: var(--muted);
+  color: #a8bfd3;
   font-size: 10px;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   text-transform: uppercase;
 }
 
-.top-label span {
-  color: var(--gold);
+.top-label strong {
+  color: var(--cyan);
 }
 
-.corner {
+.side-mark {
   position: absolute;
-  top: 18px;
-  right: 18px;
-  z-index: 5;
-  width: 28px;
-  height: 28px;
-  border-top: 1px solid var(--gold);
-  border-right: 1px solid var(--gold);
-  opacity: .8;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  color: rgba(175,213,237,.45);
+  font-size: 9px;
+  letter-spacing: 4px;
 }
 
 .bottom-label {
@@ -139,47 +142,19 @@ html, body {
   right: 0;
   z-index: 5;
   text-align: center;
+  color: #8caac2;
   font-size: 9px;
-  color: #b49a58;
   letter-spacing: 3px;
-  text-transform: uppercase;
 }
-
-.progress {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  z-index: 8;
-  background: #ffffff12;
-}
-
-.progress::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: var(--gold);
-  transform-origin: left;
-  animation: progress 60s linear infinite;
-}
-
-@keyframes progress {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
-}
-
-/* Cinematic scenes */
 
 .scene {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 2;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 65px 20px;
+  justify-content: center;
+  padding: 70px 24px;
   text-align: center;
   opacity: 0;
   visibility: hidden;
@@ -188,511 +163,302 @@ html, body {
 
 .scene-content {
   width: 100%;
-  max-width: 1050px;
+  max-width: 980px;
 }
 
-.eyebrow {
-  margin-bottom: 22px;
-  color: var(--gold);
+.scene1 { animation: sceneOne 30s linear infinite; }
+.scene2 { animation: sceneTwo 30s linear infinite; }
+.scene3 { animation: sceneThree 30s linear infinite; }
+
+@keyframes sceneOne {
+  0% { opacity: 0; visibility: visible; transform: translateY(24px); }
+  5% { opacity: 1; }
+  17% { opacity: 1; transform: translateY(0); }
+  22% { opacity: 0; visibility: hidden; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes sceneTwo {
+  0%, 20% { opacity: 0; visibility: hidden; transform: translateY(20px); }
+  24% { opacity: 1; visibility: visible; }
+  39% { opacity: 1; transform: translateY(0); }
+  44% { opacity: 0; visibility: hidden; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes sceneThree {
+  0%, 42% { opacity: 0; visibility: hidden; transform: scale(.97); }
+  47% { opacity: 1; visibility: visible; }
+  100% { opacity: 1; visibility: visible; transform: scale(1); }
+}
+
+.kicker {
+  color: var(--cyan);
   font-size: clamp(10px, 1.5vw, 13px);
   font-weight: bold;
   letter-spacing: 5px;
   text-transform: uppercase;
+  margin-bottom: 22px;
 }
 
-.main-text {
-  font-size: clamp(34px, 7.4vw, 94px);
+.headline {
+  font-size: clamp(35px, 7.5vw, 88px);
   line-height: 1.08;
   font-weight: 900;
   letter-spacing: clamp(1px, .7vw, 7px);
   text-transform: uppercase;
-  overflow-wrap: anywhere;
-  text-shadow:
-    0 0 12px rgba(212,175,55,.45),
-    0 0 36px rgba(212,135,20,.24);
 }
 
-.accent {
-  color: var(--gold);
-  text-shadow: 0 0 25px rgba(212,175,55,.65);
+.blue-text {
+  color: var(--cyan);
+  text-shadow: 0 0 30px rgba(101,220,255,.25);
 }
 
-.small-text {
-  max-width: 720px;
-  margin: 22px auto 0;
+.description {
+  max-width: 700px;
+  margin: 23px auto 0;
   color: var(--muted);
-  font-size: clamp(12px, 2vw, 19px);
+  font-size: clamp(12px, 2vw, 18px);
   line-height: 1.8;
-  letter-spacing: clamp(1px, .4vw, 4px);
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.technology-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 32px;
+.digital-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 48px);
+  border: 1px solid rgba(130,211,244,.25);
+  background: linear-gradient(
+    145deg,
+    rgba(32,75,105,.34),
+    rgba(7,20,36,.68)
+  );
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.28),
+    inset 0 1px rgba(255,255,255,.07);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
-.tech {
-  padding: 11px 15px;
-  border: 1px solid rgba(212,175,55,.5);
-  background: rgba(212,175,55,.06);
-  color: #ffe9b0;
-  font-size: clamp(9px, 1.6vw, 12px);
-  letter-spacing: 1.5px;
-  animation: tagGlow 3s ease-in-out infinite alternate;
-}
-
-.tech:nth-child(even) {
-  animation-delay: -1.5s;
-}
-
-@keyframes tagGlow {
-  from { border-color: rgba(212,175,55,.25); }
-  to { border-color: rgba(255,210,90,.9); }
-}
-
-/* 60-second scene timeline */
-
-.scene1 { animation: scene1 60s linear infinite; }
-.scene2 { animation: scene2 60s linear infinite; }
-.scene3 { animation: scene3 60s linear infinite; }
-.scene4 { animation: scene4 60s linear infinite; }
-.scene5 { animation: scene5 60s linear infinite; }
-.scene6 { animation: scene6 60s linear infinite; }
-.scene7 { animation: scene7 60s linear infinite; }
-.scene8 { animation: scene8 60s linear infinite; }
-.scene9 { animation: scene9 60s linear infinite; }
-
-@keyframes scene1 {
-  0% { opacity: 0; visibility: visible; transform: scale(1.12); }
-  2% { opacity: 1; }
-  9% { opacity: 1; transform: scale(1); }
-  11% { opacity: 0; visibility: hidden; }
-  100% { opacity: 0; visibility: hidden; }
-}
-
-@keyframes scene2 {
-  0%, 10% { opacity: 0; visibility: hidden; transform: translateY(30px); }
-  11% { visibility: visible; }
-  13% { opacity: 1; }
-  18% { opacity: 1; transform: translateY(0); }
-  21% { opacity: 0; visibility: hidden; }
-  100% { opacity: 0; visibility: hidden; }
-}
-
-@keyframes scene3 {
-  0%, 20% { opacity: 0; visibility: hidden; transform: scale(.85); }
-  21% { visibility: visible; }
-  23% { opacity: 1; }
-  28% { opacity: 1; transform: scale(1); }
-  31% { opacity: 0; visibility: hidden; }
-  100% { opacity: 0; visibility: hidden; }
-}
-
-@keyframes scene4 {
-  0%, 30% { opacity: 0; visibility: hidden; transform: translateY(25px); }
-  31% { visibility: visible; }
-  33% { opacity: 1; }
-  38% { opacity: 1; transform: translateY(0); }
-  41% { opacity: 0; visibility: hidden; }
-  100% { opacity: 0; visibility: hidden; }
-}
-
-@keyframes scene5 {
-  0%, 40% { opacity: 0; visibility: hidden; transform: scale(.85); }
-  41% { visibility: visible; }
-  43% { opacity: 1; }
-  48% { opacity: 1; transform: scale(1); }
-  51% { opacity: 0; visibility: hidden; }
-  100% { opacity: 0; visibility: hidden; }
-}
-
-@keyframes scene6 {
-  0%, 50% { opacity: 0; visibility: hidden; transform: translateX(25px); }
-  51% { visibility: visible; }
-  53% { opacity: 1; }
-  58% { opacity: 1; transform: translateX(0); }
-  61% { opacity: 0; visibility: hidden; }
-  100% { opacity: 0; visibility: hidden; }
-}
-
-@keyframes scene7 {
-  0%, 60% { opacity: 0; visibility: hidden; transform: translateX(-25px); }
-  61% { visibility: visible; }
-  63% { opacity: 1; }
-  68% { opacity: 1; transform: translateX(0); }
-  71% { opacity: 0; visibility: hidden; }
-  100% { opacity: 0; visibility: hidden; }
-}
-
-@keyframes scene8 {
-  0%, 70% { opacity: 0; visibility: hidden; transform: scale(.9); }
-  71% { visibility: visible; }
-  73% { opacity: 1; }
-  78% { opacity: 1; transform: scale(1); }
-  81% { opacity: 0; visibility: hidden; }
-  100% { opacity: 0; visibility: hidden; }
-}
-
-@keyframes scene9 {
-  0%, 80% { opacity: 0; visibility: hidden; transform: scale(.85); }
-  81% { visibility: visible; opacity: 1; }
-  87% { opacity: 1; transform: scale(1); }
-  100% { opacity: 1; visibility: visible; }
-}
-
-/* Rotating Academy emblem */
-
-.emblem-stage {
-  width: 190px;
-  height: 190px;
-  margin: 0 auto 20px;
+.emblem-frame {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  perspective: 800px;
+  border: 1px solid rgba(101,220,255,.55);
+  background: rgba(3,13,25,.45);
+  box-shadow: 0 0 45px rgba(52,177,225,.12);
 }
 
 .academy-emblem {
-  width: 130px;
-  height: 130px;
+  width: 172px;
+  height: 172px;
   object-fit: contain;
-  position: relative;
-  z-index: 2;
-  animation:
-    emblemRotate 8s linear infinite,
-    emblemPulse 2s ease-in-out infinite alternate;
+  display: block;
+  animation: none;
+  transform: none;
 }
 
-.emblem-ring {
-  position: absolute;
-  width: 175px;
-  height: 175px;
-  border: 2px solid transparent;
-  border-top-color: var(--gold);
-  border-bottom-color: #ffe6a0;
-  border-radius: 50%;
-  box-shadow: 0 0 20px #d4af3744;
-  animation: ringRotate 5s linear infinite;
-}
-
-.emblem-ring.inner {
-  width: 150px;
-  height: 150px;
-  border: 1px dashed #d4af3799;
-  animation: ringRotate 9s linear infinite reverse;
-}
-
-@keyframes emblemRotate {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(360deg); }
-}
-
-@keyframes ringRotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes emblemPulse {
-  from { filter: drop-shadow(0 0 5px #d4af3777); }
-  to { filter: drop-shadow(0 0 25px #ffe6a0); }
-}
-
-.company-name {
-  margin-top: 15px;
-  font-size: clamp(25px, 5.5vw, 65px);
-  line-height: 1.2;
-  letter-spacing: clamp(2px, .8vw, 8px);
+.brand-name {
+  font-size: clamp(23px, 5vw, 53px);
   font-weight: 900;
-}
-
-.motto {
-  margin-top: 18px;
-  color: var(--gold);
-  font-size: clamp(11px, 2vw, 18px);
-  letter-spacing: clamp(2px, .6vw, 6px);
-  line-height: 1.8;
+  letter-spacing: clamp(1px, .55vw, 6px);
+  line-height: 1.2;
 }
 
 .coming-soon {
-  margin-top: 20px;
-  color: var(--bright);
-  font-size: clamp(17px, 4vw, 30px);
-  font-weight: 900;
-  letter-spacing: 4px;
-  animation: finalPulse 1.8s ease-in-out infinite alternate;
+  margin-top: 17px;
+  color: var(--cyan);
+  font-size: clamp(17px, 3.8vw, 29px);
+  letter-spacing: 3px;
+  font-weight: 800;
 }
 
-@keyframes finalPulse {
-  from { opacity: .7; text-shadow: 0 0 5px #d4af37; }
-  to { opacity: 1; text-shadow: 0 0 25px #ffe6a0; }
+.ownership {
+  margin-top: 25px;
+  color: #d0deeb;
+  font-size: clamp(12px, 2vw, 17px);
+  line-height: 1.9;
 }
 
-.back-link {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 12px 20px;
-  border: 1px solid var(--gold);
-  color: var(--bright);
-  text-decoration: none;
-  font-size: 10px;
+.ownership strong {
+  color: var(--white);
+}
+
+.group-name {
+  display: block;
+  color: var(--cyan);
   font-weight: bold;
   letter-spacing: 2px;
-  pointer-events: auto;
-  transition: .3s;
 }
 
-.back-link:hover {
-  background: var(--gold);
-  color: #080600;
+.progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 8;
+  background: rgba(255,255,255,.12);
+}
+
+.progress::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--cyan);
+  transform-origin: left;
+  animation: progress 30s linear infinite;
+}
+
+@keyframes progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }
 
 @media (max-width: 480px) {
-  .scene { padding: 55px 17px; }
-
-  .main-text {
-    font-size: clamp(32px, 9vw, 46px);
-    letter-spacing: 1px;
-  }
-
-  .small-text {
-    margin-top: 17px;
-    letter-spacing: 2px;
-  }
-
-  .technology-list {
-    gap: 7px;
-    margin-top: 23px;
-  }
-
-  .tech { padding: 9px 10px; }
-
   .top-label {
-    top: 16px;
-    left: 14px;
+    top: 17px;
+    left: 15px;
     font-size: 8px;
     letter-spacing: 2px;
+  }
+
+  .side-mark {
+    right: 10px;
+    font-size: 7px;
+  }
+
+  .scene {
+    padding: 55px 18px;
+  }
+
+  .digital-card {
+    padding: 25px 16px;
+  }
+
+  .emblem-frame {
+    width: 176px;
+    height: 176px;
+    margin-bottom: 19px;
+  }
+
+  .academy-emblem {
+    width: 148px;
+    height: 148px;
+  }
+
+  .ownership {
+    margin-top: 19px;
   }
 
   .bottom-label {
     bottom: 12px;
-    font-size: 8px;
+    font-size: 7px;
     letter-spacing: 2px;
-  }
-
-  .emblem-stage {
-    width: 155px;
-    height: 155px;
-  }
-
-  .academy-emblem {
-    width: 105px;
-    height: 105px;
-  }
-
-  .emblem-ring {
-    width: 145px;
-    height: 145px;
-  }
-
-  .emblem-ring.inner {
-    width: 125px;
-    height: 125px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ambient-light,
-  .grid,
-  .particle,
-  .tech,
-  .academy-emblem,
-  .emblem-ring,
-  .progress::after {
-    animation-duration: 30s;
+  .architecture::before,
+  .architecture::after,
+  .light-beam,
+  .progress::after,
+  .scene {
+    animation: none;
+  }
+
+  .scene1, .scene2 {
+    display: none;
+  }
+
+  .scene3 {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
   }
 }
 </style>
 </head>
 
 <body>
-
 <main class="advertisement">
 
-  <div class="ambient-light"></div>
-  <div class="grid"></div>
-
-  <div class="particle p1"></div>
-  <div class="particle p2"></div>
-  <div class="particle p3"></div>
-  <div class="particle p4"></div>
-  <div class="particle p5"></div>
-  <div class="particle p6"></div>
-  <div class="particle p7"></div>
-  <div class="particle p8"></div>
-  <div class="particle p9"></div>
+  <div class="architecture"></div>
+  <div class="light-beam"></div>
 
   <div class="top-label">
-    <span>JT</span> ACADEMY // THE FUTURE OF LEARNING
+    <strong>JONES</strong> TECHNOLOGY / ACADEMY
   </div>
 
-  <div class="corner"></div>
+  <div class="side-mark">LEARN • BUILD • INNOVATE</div>
 
-  <!-- SCENE 1 -->
   <section class="scene scene1">
     <div class="scene-content">
-      <p class="eyebrow">A new era begins</p>
-      <h1 class="main-text">
-        THE FUTURE IS<br>
-        <span class="accent">BEING BUILT.</span>
+      <p class="kicker">A new digital chapter</p>
+      <h1 class="headline">
+        THE FUTURE<br>
+        <span class="blue-text">STARTS HERE.</span>
       </h1>
-      <p class="small-text">
-        A new chapter in technology education
+      <p class="description">
+        A new destination for technology learning is taking shape.
       </p>
     </div>
   </section>
 
-  <!-- SCENE 2 -->
   <section class="scene scene2">
     <div class="scene-content">
-      <p class="eyebrow">Your ambition. Your journey.</p>
-      <h2 class="main-text">
-        THINK<br>
-        <span class="accent">BIGGER.</span>
+      <p class="kicker">Knowledge meets possibility</p>
+      <h2 class="headline">
+        THINK.<br>
+        <span class="blue-text">CREATE. ADVANCE.</span>
       </h2>
-      <p class="small-text">
-        Great possibilities begin with curiosity
+      <p class="description">
+        Discover your potential. Build what comes next.
       </p>
     </div>
   </section>
 
-  <!-- SCENE 3 -->
   <section class="scene scene3">
     <div class="scene-content">
-      <p class="eyebrow">Knowledge creates possibilities</p>
-      <h2 class="main-text">
-        <span class="accent">LEARN.</span>
-      </h2>
-      <p class="small-text">
-        Explore technology. Develop your knowledge.
-      </p>
-    </div>
-  </section>
+      <div class="digital-card">
 
-  <!-- SCENE 4 -->
-  <section class="scene scene4">
-    <div class="scene-content">
-      <p class="eyebrow">Turn knowledge into action</p>
-      <h2 class="main-text">
-        <span class="accent">BUILD.</span>
-      </h2>
-      <p class="small-text">
-        Create projects. Develop practical skills.
-      </p>
-    </div>
-  </section>
+        <div class="emblem-frame">
+          <img
+            src="assets/academy-emblem.png"
+            alt="Jones Technology Academy official emblem"
+            class="academy-emblem">
+        </div>
 
-  <!-- SCENE 5 -->
-  <section class="scene scene5">
-    <div class="scene-content">
-      <p class="eyebrow">Think beyond the ordinary</p>
-      <h2 class="main-text">
-        <span class="accent">INNOVATE.</span>
-      </h2>
-      <p class="small-text">
-        Turn ideas into opportunities for tomorrow
-      </p>
-    </div>
-  </section>
+        <p class="kicker">The future of learning</p>
 
-  <!-- SCENE 6 -->
-  <section class="scene scene6">
-    <div class="scene-content">
-      <p class="eyebrow">Explore the digital world</p>
-      <h2 class="main-text">
-        DISCOVER<br>
-        <span class="accent">TECHNOLOGY.</span>
-      </h2>
-      <div class="technology-list">
-        <div class="tech">PROGRAMMING</div>
-        <div class="tech">WEB DEVELOPMENT</div>
-        <div class="tech">ARTIFICIAL INTELLIGENCE</div>
-        <div class="tech">DIGITAL INNOVATION</div>
+        <h2 class="brand-name">
+          JONES TECHNOLOGY
+        </h2>
+
+        <h3 class="coming-soon">
+          ACADEMY — COMING SOON
+        </h3>
+
+        <p class="ownership">
+          Brought to you by <strong>Jones Technology</strong>
+          <span class="group-name">Under Jones Group Holdings</span>
+        </p>
+
       </div>
-    </div>
-  </section>
-
-  <!-- SCENE 7 -->
-  <section class="scene scene7">
-    <div class="scene-content">
-      <p class="eyebrow">The next generation starts here</p>
-      <h2 class="main-text">
-        YOUR SKILLS.<br>
-        YOUR <span class="accent">FUTURE.</span>
-      </h2>
-      <p class="small-text">
-        Prepare to learn. Prepare to create. Prepare to lead.
-      </p>
-    </div>
-  </section>
-
-  <!-- SCENE 8 -->
-  <section class="scene scene8">
-    <div class="scene-content">
-      <p class="eyebrow">A Jones Technology initiative</p>
-      <h2 class="main-text">
-        MEET THE<br>
-        <span class="accent">NEW ERA.</span>
-      </h2>
-      <p class="small-text">
-        From Africa. For the world.
-      </p>
-    </div>
-  </section>
-
-  <!-- SCENE 9: GRAND REVEAL -->
-  <section class="scene scene9">
-    <div class="scene-content">
-
-      <div class="emblem-stage">
-        <div class="emblem-ring"></div>
-        <div class="emblem-ring inner"></div>
-        <img
-          src="assets/academy-emblem.png"
-          alt="JT Academy Official Emblem"
-          class="academy-emblem">
-      </div>
-
-      <p class="eyebrow">A Jones Group Holdings initiative</p>
-
-      <h2 class="company-name">
-        JONES <span class="accent">TECHNOLOGY</span>
-      </h2>
-
-      <h3 class="coming-soon">JT ACADEMY — COMING SOON</h3>
-
-      <p class="motto">
-        LEARN. BUILD. INNOVATE. LEAD.
-      </p>
-
-      <a href="../index.html" class="back-link">
-        EXPLORE JONES TECHNOLOGY
-      </a>
-
     </div>
   </section>
 
   <div class="bottom-label">
-    JONES TECHNOLOGY // BUILDING TOMORROW
+    BUILDING TOMORROW. EMPOWERING GENERATIONS.
   </div>
 
   <div class="progress"></div>
 
 </main>
-
 </body>
 </html>
